@@ -1,0 +1,27 @@
+{
+  "id": "main_navigation",
+  "label": "Main Navigation",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "navigationlinks": {
+        "type": "Group",
+        "config": {
+          "label": "Navigation Links",
+          "fields": {
+            "menuitem": {
+              "type": "Link",
+              "config": {
+                "label": "Menu Item",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
