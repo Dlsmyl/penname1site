@@ -4,5 +4,31 @@
     "main_navigation": {
       "navigationlinks": {}
     }
+  },
+  "slices": {
+    "HeroWithFigure": {
+      "default": {
+        "primary": {
+          "herofigure": {
+            "content": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+          },
+          "heroheading": {
+            "content": "Call to Action (Heading)"
+          },
+          "herotext": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "herobuttontext": {
+            "content": "Call to Action Button"
+          },
+          "herobuttonlink": {
+            "content": "https://neilmastroianni.com"
+          }
+        }
+      }
+    }
   }
 }

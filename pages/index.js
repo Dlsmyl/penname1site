@@ -1,5 +1,7 @@
 import Image from 'next/future/image'
-export default function Home() {
+import { createClient } from '../prismicio'
+export default function Home({ page, navigation, settings }) {
+  console.log(navigation)
   return (
     <>
       <div className="max-w-screen-xl mx-auto">
@@ -38,4 +40,15 @@ export default function Home() {
       </div>
     </>
   )
+}
+export async function getStaticProps({ previewData }) {
+  const client = createClient({ previewData })
+
+  const navigation = await client.getSingle('main_navigation')
+
+  return {
+    props: {
+      navigation,
+    },
+  }
 }

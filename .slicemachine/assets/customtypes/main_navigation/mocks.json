@@ -13,9 +13,10 @@
   "data": {
     "navigationlinks": [
       {
+        "menuitemtext": "weather",
         "menuitem": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://google.com"
         }
       }
     ]

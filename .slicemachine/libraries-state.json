@@ -1,5 +1,131 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "hero_with_figure": {
+        "library": "slices",
+        "id": "hero_with_figure",
+        "name": "HeroWithFigure",
+        "description": "HeroWithFigure",
+        "model": {
+          "id": "hero_with_figure",
+          "type": "SharedSlice",
+          "name": "HeroWithFigure",
+          "description": "HeroWithFigure",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroWithFigure",
+              "primary": {
+                "herofigure": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Hero Figure",
+                    "constraint": {
+                      "width": 260,
+                      "height": 400
+                    },
+                    "thumbnails": []
+                  }
+                },
+                "herofigurelocation": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Figure Location",
+                    "placeholder_false": "Left",
+                    "placeholder_true": "Right",
+                    "default_value": false
+                  }
+                },
+                "heroheading": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Hero Heading",
+                    "placeholder": ""
+                  }
+                },
+                "herotext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Hero Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "herobuttontext": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "herobuttonlink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                },
+                "herobackgroundcolor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Hero Background Color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "herofigure": {
+                "dimensions": {
+                  "width": 260,
+                  "height": 400
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+              },
+              "herofigurelocation": true,
+              "heroheading": "Call to Action (Heading)",
+              "herotext": [
+                {
+                  "type": "paragraph",
+                  "text": "Enim ipsum cupidatat sint. Ex duis deserunt id.",
+                  "spans": []
+                }
+              ],
+              "herobuttontext": "Call to Action Button",
+              "herobuttonlink": {
+                "link_type": "Web",
+                "url": "https://neilmastroianni.com"
+              },
+              "herobackgroundcolor": "#7d7364"
+            },
+            "slice_type": "hero_with_figure"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
   }
 }

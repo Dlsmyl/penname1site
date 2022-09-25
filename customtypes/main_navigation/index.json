@@ -10,6 +10,13 @@
         "config": {
           "label": "Navigation Links",
           "fields": {
+            "menuitemtext": {
+              "type": "Text",
+              "config": {
+                "label": "Menu Item Text",
+                "placeholder": ""
+              }
+            },
             "menuitem": {
               "type": "Link",
               "config": {
