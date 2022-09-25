@@ -106,7 +106,12 @@
               "herotext": [
                 {
                   "type": "paragraph",
-                  "text": "Enim ipsum cupidatat sint. Ex duis deserunt id.",
+                  "text": "Commodo officia sit consequat pariatur.",
+                  "spans": []
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Ut officia aute adipisicing velit ipsum sint dolor ea fugiat eiusmod eiusmod.",
                   "spans": []
                 }
               ],
@@ -115,7 +120,7 @@
                 "link_type": "Web",
                 "url": "https://neilmastroianni.com"
               },
-              "herobackgroundcolor": "#7d7364"
+              "herobackgroundcolor": "#81fa86"
             },
             "slice_type": "hero_with_figure"
           }
@@ -124,7 +129,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/nmastroianni/linuxDev/next/penname1site/slices/HeroWithFigure/default/preview.png",
+            "width": 859,
+            "height": 451
+          }
+        }
       }
     }
   }
