@@ -9,7 +9,7 @@ export default function Home({ page, navigation, settings }) {
           <a className="btn btn-ghost normal-case text-xl">Jamie Whitmann</a>
         </nav>
       </div>
-      <div className="hero min-h-screen bg-base-200 bg-gradient-to-b from-transparent to-secondary dark:to-gray-900">
+      <div className="hero min-h-screen bg-base-200 bg-gradient-to-b from-transparent to-secondary">
         <div className="hero-content flex-col lg:flex-row">
           <Image
             src="/images/free_book_cover.png"

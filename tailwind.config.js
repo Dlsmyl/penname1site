@@ -9,8 +9,8 @@ module.exports = {
     extend: {},
   },
   daisyui: {
-    themes: ['pastel', 'dark'],
-    darkTheme: 'dark',
+    themes: ['pastel'],
+    darkTheme: 'pastel',
   },
   plugins: [require('daisyui')],
 }
