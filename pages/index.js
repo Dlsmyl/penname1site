@@ -1,10 +1,21 @@
 import { SliceZone } from '@prismicio/react'
-import Image from 'next/future/image'
+import Head from 'next/head'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 export default function Home({ page, navigation, settings }) {
+  console.log(page)
   return (
     <>
+      <Head>
+        <title>Jamie Whitmann • Romance Author</title>
+        <meta
+          property="og:description"
+          content={page.data.homepagemetadescription}
+        />
+        {page.data.homepagemetaimage && (
+          <meta property="og:image" content={page.data.homepagemetaimage.url} />
+        )}
+      </Head>
       <div className="max-w-screen-xl mx-auto">
         <nav className="navbar bg-base-100 justify-center lg:justify-start">
           <a className="btn btn-ghost normal-case text-xl">Jamie Whitmann</a>

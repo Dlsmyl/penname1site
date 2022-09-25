@@ -5,6 +5,21 @@
   "status": true,
   "json": {
     "Main": {
+      "homepagemetadescription": {
+        "type": "Text",
+        "config": {
+          "label": "Homepage Meta Description",
+          "placeholder": ""
+        }
+      },
+      "homepagemetaimage": {
+        "type": "Image",
+        "config": {
+          "label": "Homepage Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

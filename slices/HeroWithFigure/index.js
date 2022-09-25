@@ -21,9 +21,10 @@ const HeroWithFigure = ({ slice }) => {
   } = slice
   return (
     <section
-      className={`hero min-h-screen ${
-        herobackgroundcolor ? `bg-[${herobackgroundcolor}]` : `bg-base-200`
-      }`}
+      className={`hero min-h-screen`}
+      style={{
+        backgroundColor: herobackgroundcolor ? herobackgroundcolor : '#F9FAFB',
+      }}
     >
       <div
         className={`hero-content flex-col ${
