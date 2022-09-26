@@ -8,12 +8,22 @@ export default function Home({ page, navigation, settings }) {
     <>
       <Head>
         <title>Jamie Whitmann • Romance Author</title>
+        <meta name="description" content={page.data.homepagemetadescription} />
         <meta
           property="og:description"
           content={page.data.homepagemetadescription}
         />
+        <meta property="og:url" content="https://www.jamiewhitmann.com" />
+        <meta property="og:type" content="website" />
         {page.data.homepagemetaimage && (
           <meta property="og:image" content={page.data.homepagemetaimage.url} />
+        )}
+        <meta property="twitter:card" content="summary" />
+        {page.data.homepagemetaimage && (
+          <meta
+            property="twitter:image"
+            content={page.data.homepagemetaimage.url}
+          />
         )}
       </Head>
       <div className="max-w-screen-xl mx-auto">
