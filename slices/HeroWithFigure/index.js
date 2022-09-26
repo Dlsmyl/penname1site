@@ -33,27 +33,43 @@ const HeroWithFigure = ({ slice }) => {
       background: herobackgroundcolor ? herobackgroundcolor : '#F9FAFB',
     }
   }
-  console.log('bgStyle => ', bgStyle)
+
   return (
     <section className={`hero min-h-screen`} style={bgStyle}>
       <div
-        className={`hero-content flex-col ${
+        className={`hero-content flex-col lg:space-x-8 ${
           herofigurelocation ? `lg:flex-row-reverse` : `lg:flex-row`
         }`}
       >
-        <Image
-          src={herofigure.url}
-          alt={herofigure.alt}
-          width={260}
-          height={400}
-          className="max-w-sm rounded-lg shadow-2xl"
-        />
+        {herobuttonlink ? (
+          <Link href={herobuttonlink.url}>
+            <a>
+              <Image
+                src={herofigure.url}
+                alt={herofigure.alt}
+                width={260}
+                height={400}
+                className="max-w-sm rounded-lg shadow-2xl"
+              />
+            </a>
+          </Link>
+        ) : (
+          <Image
+            src={herofigure.url}
+            alt={herofigure.alt}
+            width={260}
+            height={400}
+            className="max-w-sm rounded-lg shadow-2xl"
+          />
+        )}
         <div>
           <h2 className="text-5xl font-bold">{heroheading}</h2>
           <PrismicRichText field={herotext} components={components} />
-          <Link href={herobuttonlink.url}>
-            <a className="btn btn-primary">{herobuttontext}</a>
-          </Link>
+          {herobuttonlink && (
+            <Link href={herobuttonlink.url}>
+              <a className="btn btn-primary">{herobuttontext}</a>
+            </Link>
+          )}
         </div>
       </div>
     </section>
