@@ -49,7 +49,7 @@ const HeroWithFigure = ({ slice }) => {
                 alt={herofigure.alt}
                 width={260}
                 height={400}
-                className="max-w-sm rounded-lg shadow-2xl"
+                className="max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3"
               />
             </a>
           </Link>
@@ -59,7 +59,7 @@ const HeroWithFigure = ({ slice }) => {
             alt={herofigure.alt}
             width={260}
             height={400}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3"
           />
         )}
         <div>
