@@ -45,6 +45,13 @@
           "label": "Book Series",
           "select": "document"
         }
+      },
+      "bookpublishdate": {
+        "type": "Date",
+        "config": {
+          "label": "Book Publish Date",
+          "placeholder": ""
+        }
       }
     }
   }

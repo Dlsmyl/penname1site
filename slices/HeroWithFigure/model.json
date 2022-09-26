@@ -150,6 +150,80 @@
       },
       "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "heroWithBackgroundImage",
+      "name": "HeroWithBackgroundImage",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroWithFigure",
+      "primary": {
+        "herofigure": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Figure",
+            "constraint": {
+              "width": 260,
+              "height": 400
+            },
+            "thumbnails": []
+          }
+        },
+        "herofigurelocation": {
+          "type": "Boolean",
+          "config": {
+            "label": "Figure Location",
+            "placeholder_false": "Left",
+            "placeholder_true": "Right",
+            "default_value": false
+          }
+        },
+        "heroheading": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Heading",
+            "placeholder": ""
+          }
+        },
+        "herotext": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "herobuttontext": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "herobuttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "select": null
+          }
+        },
+        "herobackgroundimage": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Background Image",
+            "constraint": {
+              "width": 1920,
+              "height": 1080
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

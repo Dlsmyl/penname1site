@@ -1,0 +1,39 @@
+{
+  "id": "page",
+  "label": "Page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "pagetitle": {
+        "type": "Text",
+        "config": {
+          "label": "PageTitle",
+          "placeholder": ""
+        }
+      },
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        }
+      },
+      "pagemetaimage": {
+        "type": "Image",
+        "config": {
+          "label": "PageMetaImage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "pagemetadescription": {
+        "type": "Text",
+        "config": {
+          "label": "PageMetaDescription",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

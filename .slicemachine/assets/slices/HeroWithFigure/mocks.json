@@ -15,17 +15,17 @@
         "copyright": null,
         "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
       },
-      "herofigurelocation": false,
+      "herofigurelocation": true,
       "heroheading": "Call to Action (Heading)",
       "herotext": [
         {
           "type": "paragraph",
-          "text": "Do ut velit dolore aliqua ea. Velit mollit laboris Lorem. Laborum ipsum incididunt cillum sunt reprehenderit esse deserunt dolor nisi sunt elit ullamco.",
+          "text": "Dolor dolore laboris aliquip enim non pariatur cillum elit. Excepteur commodo ex officia cupidatat nisi deserunt velit fugiat excepteur et excepteur veniam aute ea. Incididunt elit ea irure et do velit aliquip.",
           "spans": []
         },
         {
           "type": "paragraph",
-          "text": "Amet duis consequat ad aliqua duis minim laboris. Ex ipsum in et reprehenderit ad enim consectetur et. Deserunt anim laboris ex cillum aliqua tempor eiusmod anim mollit.",
+          "text": "Aliquip cillum sunt laborum.",
           "spans": []
         }
       ],
@@ -34,7 +34,7 @@
         "link_type": "Web",
         "url": "https://neilmastroianni.com"
       },
-      "herobackgroundcolor": "#e0eb8e"
+      "herobackgroundcolor": "#36fa86"
     },
     "slice_type": "hero_with_figure"
   },
@@ -59,17 +59,59 @@
       "herotext": [
         {
           "type": "paragraph",
-          "text": "Reprehenderit qui officia aliqua enim culpa Lorem occaecat eiusmod eiusmod ullamco. Deserunt do sint aute commodo ad in. Veniam nisi ipsum ullamco proident ipsum sint enim dolor voluptate.",
+          "text": "Culpa veniam irure ullamco nisi adipisicing veniam. Commodo elit eu sint fugiat aliquip.",
           "spans": []
         }
       ],
       "herobuttontext": "Call To Action Button Text",
       "herobuttonlink": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "http://twitter.com"
       },
       "herobackgroundcolorstart": "#d9e3f0",
-      "herobackgroundcolorend": "#697689"
+      "herobackgroundcolorend": "#2ccce4"
+    },
+    "slice_type": "hero_with_figure"
+  },
+  {
+    "variation": "heroWithBackgroundImage",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "herofigure": {
+        "dimensions": {
+          "width": 260,
+          "height": 400
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+      },
+      "herofigurelocation": false,
+      "heroheading": "Call to Action (Heading)",
+      "herotext": [
+        {
+          "type": "paragraph",
+          "text": "Ipsum aliquip aliquip aliqua tempor irure sit pariatur.",
+          "spans": []
+        }
+      ],
+      "herobuttontext": "Call to Action Button",
+      "herobuttonlink": {
+        "link_type": "Web",
+        "url": "https://prismic.io"
+      },
+      "herobackgroundimage": {
+        "dimensions": {
+          "width": 1920,
+          "height": 1080
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1520262454473-a1a82276a574"
+      }
     },
     "slice_type": "hero_with_figure"
   }
