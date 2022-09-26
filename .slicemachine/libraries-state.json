@@ -81,6 +81,83 @@
               },
               "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "heroWithFigureGradient",
+              "name": "Hero With Figure - Gradient",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroWithFigure",
+              "primary": {
+                "herofigure": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Hero Figure",
+                    "constraint": {
+                      "width": 260,
+                      "height": 400
+                    },
+                    "thumbnails": []
+                  }
+                },
+                "herofigurelocation": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Figure Location",
+                    "placeholder_false": "Left",
+                    "placeholder_true": "Right",
+                    "default_value": false
+                  }
+                },
+                "heroheading": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Hero Heading",
+                    "placeholder": ""
+                  }
+                },
+                "herotext": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Hero Text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "herobuttontext": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": ""
+                  }
+                },
+                "herobuttonlink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                },
+                "herobackgroundcolorstart": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Hero Background Color Start",
+                    "placeholder": ""
+                  }
+                },
+                "herobackgroundcolorend": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Hero Background Color End",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -101,17 +178,17 @@
                 "copyright": null,
                 "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
               },
-              "herofigurelocation": true,
+              "herofigurelocation": false,
               "heroheading": "Call to Action (Heading)",
               "herotext": [
                 {
                   "type": "paragraph",
-                  "text": "Commodo officia sit consequat pariatur.",
+                  "text": "Do ut velit dolore aliqua ea. Velit mollit laboris Lorem. Laborum ipsum incididunt cillum sunt reprehenderit esse deserunt dolor nisi sunt elit ullamco.",
                   "spans": []
                 },
                 {
                   "type": "paragraph",
-                  "text": "Ut officia aute adipisicing velit ipsum sint dolor ea fugiat eiusmod eiusmod.",
+                  "text": "Amet duis consequat ad aliqua duis minim laboris. Ex ipsum in et reprehenderit ad enim consectetur et. Deserunt anim laboris ex cillum aliqua tempor eiusmod anim mollit.",
                   "spans": []
                 }
               ],
@@ -120,7 +197,42 @@
                 "link_type": "Web",
                 "url": "https://neilmastroianni.com"
               },
-              "herobackgroundcolor": "#81fa86"
+              "herobackgroundcolor": "#e0eb8e"
+            },
+            "slice_type": "hero_with_figure"
+          },
+          "heroWithFigureGradient": {
+            "variation": "heroWithFigureGradient",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "herofigure": {
+                "dimensions": {
+                  "width": 260,
+                  "height": 400
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+              },
+              "herofigurelocation": true,
+              "heroheading": "Call to Action (Heading)",
+              "herotext": [
+                {
+                  "type": "paragraph",
+                  "text": "Reprehenderit qui officia aliqua enim culpa Lorem occaecat eiusmod eiusmod ullamco. Deserunt do sint aute commodo ad in. Veniam nisi ipsum ullamco proident ipsum sint enim dolor voluptate.",
+                  "spans": []
+                }
+              ],
+              "herobuttontext": "Call To Action Button Text",
+              "herobuttonlink": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "herobackgroundcolorstart": "#d9e3f0",
+              "herobackgroundcolorend": "#697689"
             },
             "slice_type": "hero_with_figure"
           }
@@ -134,6 +246,11 @@
             "path": "/home/nmastroianni/linuxDev/next/penname1site/slices/HeroWithFigure/default/preview.png",
             "width": 859,
             "height": 451
+          },
+          "heroWithFigureGradient": {
+            "path": "/home/nmastroianni/linuxDev/next/penname1site/slices/HeroWithFigure/heroWithFigureGradient/preview.png",
+            "width": 1259,
+            "height": 581
           }
         }
       }

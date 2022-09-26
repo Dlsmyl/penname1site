@@ -18,14 +18,24 @@ const HeroWithFigure = ({ slice }) => {
       herobuttonlink,
       herobuttontext,
     },
+    variation,
   } = slice
+  let bgStyle
+  if (variation === 'heroWithFigureGradient') {
+    const {
+      primary: { herobackgroundcolorstart, herobackgroundcolorend },
+    } = slice
+    bgStyle = {
+      background: `linear-gradient(${herobackgroundcolorstart}, ${herobackgroundcolorend})`,
+    }
+  } else {
+    bgStyle = {
+      background: herobackgroundcolor ? herobackgroundcolor : '#F9FAFB',
+    }
+  }
+  console.log('bgStyle => ', bgStyle)
   return (
-    <section
-      className={`hero min-h-screen`}
-      style={{
-        backgroundColor: herobackgroundcolor ? herobackgroundcolor : '#F9FAFB',
-      }}
-    >
+    <section className={`hero min-h-screen`} style={bgStyle}>
       <div
         className={`hero-content flex-col ${
           herofigurelocation ? `lg:flex-row-reverse` : `lg:flex-row`

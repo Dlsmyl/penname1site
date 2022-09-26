@@ -28,6 +28,31 @@
             "content": "https://neilmastroianni.com"
           }
         }
+      },
+      "heroWithFigureGradient": {
+        "primary": {
+          "herofigure": {
+            "content": "https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+          },
+          "herobackgroundcolorstart": {
+            "content": "#d9e3f0"
+          },
+          "herobackgroundcolorend": {
+            "content": "#697689"
+          },
+          "heroheading": {
+            "content": "Call to Action (Heading)"
+          },
+          "herotext": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "herobuttontext": {
+            "content": "Call To Action Button Text"
+          }
+        }
       }
     }
   }
