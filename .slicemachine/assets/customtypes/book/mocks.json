@@ -1,0 +1,39 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "book",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "booktitle": "Fresh Beginnings",
+    "bookcover": {
+      "dimensions": {
+        "width": 520,
+        "height": 800
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a"
+    },
+    "amazonurl": {
+      "link_type": "Web",
+      "url": "https://www.amazon.ca"
+    },
+    "bookseries": {
+      "id": "mock_document_id",
+      "link_type": "Document",
+      "type": "mock",
+      "tags": [],
+      "lang": "en-us",
+      "slug": null,
+      "first_publication_date": "1970-01-01T00:00:01+0000",
+      "last_publication_date": "1970-01-01T01:00:00+0000"
+    }
+  }
+}

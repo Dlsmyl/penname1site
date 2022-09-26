@@ -3,6 +3,19 @@
     "homepage": {},
     "main_navigation": {
       "navigationlinks": {}
+    },
+    "book": {
+      "booktitle": {
+        "content": "Fresh Beginnings"
+      },
+      "amazonurl": {
+        "content": "https://www.amazon.ca"
+      }
+    },
+    "series": {
+      "seriesname": {
+        "content": "The Fresh Beginnings Series"
+      }
     }
   },
   "slices": {

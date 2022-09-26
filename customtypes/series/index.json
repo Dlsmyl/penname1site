@@ -1,0 +1,32 @@
+{
+  "id": "series",
+  "label": "Series",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "seriesname": {
+        "type": "Text",
+        "config": {
+          "label": "Series Name",
+          "placeholder": ""
+        }
+      },
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        }
+      },
+      "seriesimage": {
+        "type": "Image",
+        "config": {
+          "label": "Series Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      }
+    }
+  }
+}
