@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 export default function Home({ page, navigation, settings }) {
-  console.log(page)
   return (
     <>
       <Head>
@@ -26,11 +25,6 @@ export default function Home({ page, navigation, settings }) {
           />
         )}
       </Head>
-      <div className="max-w-screen-xl mx-auto">
-        <nav className="navbar bg-base-100 justify-center lg:justify-start">
-          <a className="btn btn-ghost normal-case text-xl">Jamie Whitmann</a>
-        </nav>
-      </div>
       <SliceZone slices={page.data.slices} components={components} />
     </>
   )
