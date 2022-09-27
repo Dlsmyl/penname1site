@@ -1,0 +1,55 @@
+{
+  "id": "carousel",
+  "type": "SharedSlice",
+  "name": "Carousel",
+  "description": "Carousel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Carousel",
+      "primary": {
+        "carouseltitle": {
+          "type": "Text",
+          "config": {
+            "label": "Carousel Title",
+            "placeholder": ""
+          }
+        },
+        "carouseldescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Carousel Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "carouselimage": {
+          "type": "Image",
+          "config": {
+            "label": "CarouselImage",
+            "constraint": {
+              "width": 260,
+              "height": 400
+            },
+            "thumbnails": []
+          }
+        },
+        "carouselimagelink": {
+          "type": "Link",
+          "config": {
+            "label": "CarouselImageLink",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

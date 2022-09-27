@@ -90,6 +90,23 @@
           }
         }
       }
+    },
+    "Carousel": {
+      "default": {
+        "primary": {
+          "carouseldescription": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "carouselimage": {
+            "content": "https://images.unsplash.com/photo-1554151228-14d9def656e4"
+          }
+        }
+      }
     }
   }
 }
