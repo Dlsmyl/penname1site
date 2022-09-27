@@ -2,9 +2,10 @@ import { SliceZone } from '@prismicio/react'
 import Head from 'next/head'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
+import Layout from '../components/Layout/Layout'
 export default function Home({ page, navigation, settings }) {
   return (
-    <>
+    <Layout {...navigation}>
       <Head>
         <title>Jamie Whitmann • Romance Author</title>
         <meta name="description" content={page.data.homepagemetadescription} />
@@ -26,7 +27,7 @@ export default function Home({ page, navigation, settings }) {
         )}
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
-    </>
+    </Layout>
   )
 }
 export async function getStaticProps({ previewData }) {

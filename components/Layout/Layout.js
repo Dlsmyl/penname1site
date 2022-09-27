@@ -1,9 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 
-const Layout = ({ children, data, id }) => {
-  console.log('LAYOUT PAGE', data)
-  const { navigationlinks } = data
+const Layout = ({ children, data: { navigationlinks } }) => {
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
