@@ -19,14 +19,14 @@ const Carousel = ({ slice }) => {
                   src={item.carouselimage.url}
                   alt={item.carouselimage.alt || ''}
                   width={260}
-                  height={600}
+                  height={400}
                 />
               </PrismicLink>
             </div>
           )
         })}
       </div>
-      <div className="mt-4 flex justify-center w-full py-2 gap-2">
+      <div className="mt-4 flex justify-center w-full py-2 gap-4">
         {slice?.items?.map((item, i) => {
           return (
             <a
