@@ -1,0 +1,29 @@
+import React from 'react'
+import { PrismicRichText } from '@prismicio/react'
+
+const Prose = ({ slice }) => {
+  const components = {
+    paragraph: ({ node, children }) => <p className={`my-4 `}>{children}</p>,
+  }
+  return (
+    <section className="prose md:prose-lg lg:prose-xl xl:prose-2xl mx-auto">
+      <span className="title">
+        {slice.primary.title ? (
+          <PrismicRichText field={slice.primary.title} />
+        ) : (
+          ''
+        )}
+      </span>
+      {slice.primary.prosecontent ? (
+        <PrismicRichText
+          components={components}
+          field={slice.primary.prosecontent}
+        />
+      ) : (
+        <p>No content added in CMS. Please add content!</p>
+      )}
+    </section>
+  )
+}
+
+export default Prose

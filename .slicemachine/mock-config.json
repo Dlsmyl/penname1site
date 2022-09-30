@@ -107,6 +107,18 @@
           }
         }
       }
+    },
+    "Prose": {
+      "default": {
+        "primary": {
+          "prosecontent": {
+            "config": {
+              "patternType": "STORY",
+              "blocks": 3
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -15,6 +15,7 @@
     "@prismicio/next": "^0.1.5",
     "@prismicio/react": "^2.5.0",
     "@prismicio/slice-simulator-react": "^0.2.2",
+    "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.12",
     "daisyui": "^2.31.0",
     "next": "12.3.1",

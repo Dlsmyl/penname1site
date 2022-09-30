@@ -33,6 +33,20 @@
           "label": "PageMetaDescription",
           "placeholder": ""
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "carousel": {
+              "type": "SharedSlice"
+            },
+            "hero_with_figure": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/future/image'
 import { PrismicRichText } from '@prismicio/react'
 import Link from 'next/link'
+import { PrismicNextImage } from '@prismicio/next'
 
 const HeroWithFigure = ({ slice }) => {
   // define HTML serializer
@@ -60,22 +61,18 @@ const HeroWithFigure = ({ slice }) => {
       >
         {herobuttonlink ? (
           <Link href={herobuttonlink.url}>
-            <a>
-              <Image
-                src={herofigure.url}
-                alt={herofigure.alt || ''}
-                width={260}
-                height={400}
-                className="max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3"
+            <a className="transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3 shrink-0">
+              <PrismicNextImage
+                field={herofigure}
+                imgixParams={{ h: 400, w: 260 }}
+                className="max-w-sm rounded-lg shadow-2xl"
               />
             </a>
           </Link>
         ) : (
-          <Image
-            src={herofigure.url}
+          <PrismicNextImage
+            field={herofigure}
             alt={herofigure.alt || ''}
-            width={260}
-            height={400}
             className="max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3"
           />
         )}
