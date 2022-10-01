@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/future/image'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import Link from 'next/link'
 import { PrismicNextImage } from '@prismicio/next'
 
@@ -9,7 +8,7 @@ const HeroWithFigure = ({ slice }) => {
   const components = {
     paragraph: ({ node, children }) => (
       <p
-        className={`my-4 ${
+        className={`my-4 text-left ${
           variation === 'heroWithBackgroundImage' ? ` text-white` : ``
         }`}
       >
@@ -42,6 +41,7 @@ const HeroWithFigure = ({ slice }) => {
     bgStyle = {
       background: `url('${herobackgroundimage.url}')`,
       backgroundSize: 'cover',
+      backgroundPosition: 'center',
     }
   } else {
     bgStyle = {
@@ -50,7 +50,7 @@ const HeroWithFigure = ({ slice }) => {
   }
 
   return (
-    <section className={`hero min-h-screen relative`} style={bgStyle}>
+    <section className={`hero relative md:min-h-screen`} style={bgStyle}>
       {variation === 'heroWithBackgroundImage' ? (
         <div className="absolute inset-0 bg-gray-900 bg-opacity-90"></div>
       ) : null}
@@ -64,7 +64,7 @@ const HeroWithFigure = ({ slice }) => {
             <a className="transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3 shrink-0">
               <PrismicNextImage
                 field={herofigure}
-                imgixParams={{ h: 400, w: 260 }}
+                imgixParams={{ h: 360, w: 250 }}
                 className="max-w-sm rounded-lg shadow-2xl"
               />
             </a>
@@ -76,9 +76,9 @@ const HeroWithFigure = ({ slice }) => {
             className="max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3"
           />
         )}
-        <div>
+        <div className="text-center md:text-left">
           <h2
-            className={`text-5xl font-bold ${
+            className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold  ${
               variation === 'heroWithBackgroundImage'
                 ? ` text-secondary-focus`
                 : ``
@@ -88,9 +88,9 @@ const HeroWithFigure = ({ slice }) => {
           </h2>
           <PrismicRichText field={herotext} components={components} />
           {herobuttonlink && (
-            <Link href={herobuttonlink.url}>
-              <a className="btn btn-secondary">{herobuttontext}</a>
-            </Link>
+            <PrismicLink field={herobuttonlink} className="btn btn-secondary">
+              {herobuttontext}
+            </PrismicLink>
           )}
         </div>
       </div>

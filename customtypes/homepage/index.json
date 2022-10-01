@@ -30,6 +30,9 @@
             },
             "carousel": {
               "type": "SharedSlice"
+            },
+            "prose": {
+              "type": "SharedSlice"
             }
           }
         }
