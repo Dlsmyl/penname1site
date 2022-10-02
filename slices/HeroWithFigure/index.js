@@ -50,7 +50,7 @@ const HeroWithFigure = ({ slice }) => {
   }
 
   return (
-    <section className={`hero relative md:min-h-screen`} style={bgStyle}>
+    <section className={`hero relative min-h-[600px]`} style={bgStyle}>
       {variation === 'heroWithBackgroundImage' ? (
         <div className="absolute inset-0 bg-gray-900 bg-opacity-90"></div>
       ) : null}

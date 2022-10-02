@@ -16,7 +16,10 @@
       "seriesname": {
         "content": "The Fresh Beginnings Series"
       },
-      "seriesbooks": {}
+      "seriesbooks": {},
+      "boxsetlink": {
+        "content": "https://www.amazon.com"
+      }
     },
     "page": {
       "pagetitle": {
@@ -121,6 +124,34 @@
               "patternType": "STORY",
               "blocks": 3
             }
+          }
+        }
+      }
+    },
+    "SeriesHero": {
+      "default": {
+        "items": {},
+        "primary": {
+          "subtitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "backgroundcolor": {
+            "content": "#d9e3f0"
           }
         }
       }

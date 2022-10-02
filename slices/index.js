@@ -3,15 +3,18 @@
 import Carousel from './Carousel';
 import HeroWithFigure from './HeroWithFigure';
 import Prose from './Prose';
+import SeriesHero from './SeriesHero';
 
 export {
 	Carousel,
 	HeroWithFigure,
 	Prose,
+	SeriesHero,
 };
 
 export const components = {
 	carousel: Carousel,
 	hero_with_figure: HeroWithFigure,
 	prose: Prose,
+	series_hero: SeriesHero,
 };

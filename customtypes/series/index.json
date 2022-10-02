@@ -44,6 +44,15 @@
             }
           }
         }
+      },
+      "boxsetlink": {
+        "type": "Link",
+        "config": {
+          "label": "Box Set Link",
+          "placeholder": "Enter link to box set (amazon)",
+          "allowTargetBlank": false,
+          "select": null
+        }
       }
     }
   }

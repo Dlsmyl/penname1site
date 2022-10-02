@@ -599,6 +599,132 @@
             "height": 851
           }
         }
+      },
+      "series_hero": {
+        "library": "slices",
+        "id": "series_hero",
+        "name": "SeriesHero",
+        "description": "SeriesHero",
+        "model": {
+          "id": "series_hero",
+          "type": "SharedSlice",
+          "name": "SeriesHero",
+          "description": "SeriesHero",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SeriesHero",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Series Hero Title (Jamie Whitmann)",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "subtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Subtitle",
+                    "placeholder": "Subtitle (Clean Romance with HEA)",
+                    "allowTargetBlank": true,
+                    "single": "heading3"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "Describe author or featured series",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,strong,em,hyperlink"
+                  }
+                },
+                "backgroundcolor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "series": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Series",
+                    "select": "document",
+                    "customtypes": [
+                      "series"
+                    ]
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "series": {
+                  "id": "mock_document_id",
+                  "link_type": "Document",
+                  "type": "series",
+                  "tags": [],
+                  "lang": "en-us",
+                  "slug": null,
+                  "first_publication_date": "1970-01-01T00:00:01+0000",
+                  "last_publication_date": "1970-01-01T01:00:00+0000"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Surrounded",
+                  "spans": []
+                }
+              ],
+              "subtitle": [
+                {
+                  "type": "heading3",
+                  "text": "Similar",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Proident laborum eu aliqua ut et duis. Aliqua do Lorem ipsum.",
+                  "spans": []
+                }
+              ],
+              "backgroundcolor": "#d9e3f0"
+            },
+            "slice_type": "series_hero"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/nmastroianni/linuxDev/next/penname1site/slices/SeriesHero/default/preview.png",
+            "width": 381,
+            "height": 465
+          }
+        }
       }
     }
   }

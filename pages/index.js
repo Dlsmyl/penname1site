@@ -32,7 +32,13 @@ export default function Home({ page, navigation, settings }) {
 }
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
-  const page = await client.getSingle('homepage')
+  const page = await client.getSingle('homepage', {
+    fetchLinks: [
+      'series.seriesname',
+      'series.boxsetlink',
+      'series.seriesimage',
+    ],
+  })
   const navigation = await client.getSingle('main_navigation')
 
   return {

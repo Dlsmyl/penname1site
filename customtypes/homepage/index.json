@@ -33,6 +33,9 @@
             },
             "prose": {
               "type": "SharedSlice"
+            },
+            "series_hero": {
+              "type": "SharedSlice"
             }
           }
         }
