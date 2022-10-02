@@ -7,13 +7,13 @@ const Prose = ({ slice }) => {
   }
   return (
     <section className="prose md:prose-lg lg:prose-xl xl:prose-2xl mx-auto">
-      <span className="title">
+      <div className="font-abril mt-4 md:mt-6 lg:mt-8 xl:mt-10">
         {slice.primary.title ? (
           <PrismicRichText field={slice.primary.title} />
         ) : (
           ''
         )}
-      </span>
+      </div>
       {slice.primary.prosecontent ? (
         <PrismicRichText
           components={components}

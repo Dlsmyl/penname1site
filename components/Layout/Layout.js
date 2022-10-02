@@ -6,7 +6,7 @@ const Layout = ({ children, data: { navigationlinks } }) => {
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-        <div className="w-full navbar bg-base-200">
+        <div className="w-full navbar bg-accent">
           <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
               <svg
@@ -24,7 +24,11 @@ const Layout = ({ children, data: { navigationlinks } }) => {
               </svg>
             </label>
           </div>
-          <div className="flex-1 px-2 mx-2">Jamie Whitmann</div>
+          <div className="flex-1 px-2 mx-2 font-abril text-xl">
+            <Link href="/">
+              <a>Jamie Whitmann</a>
+            </Link>
+          </div>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
               {navigationlinks.length
@@ -43,12 +47,14 @@ const Layout = ({ children, data: { navigationlinks } }) => {
         </div>
         {children}
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
-          {/* <div className="grid grid-flow-col gap-4">
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
+          <div className="grid grid-flow-col gap-4">
+            <Link className="link link-hover" href={'/privacy'}>
+              Privacy
+            </Link>
+            {/* <a className="link link-hover">Contact</a>
             <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
-          </div> */}
+            <a className="link link-hover">Press kit</a> */}
+          </div>
           <div>
             {/* <div className="grid grid-flow-col gap-4">
               <a>
