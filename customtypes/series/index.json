@@ -22,9 +22,27 @@
       "seriesimage": {
         "type": "Image",
         "config": {
-          "label": "Series Image",
+          "label": "Series Box Set Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "seriesbooks": {
+        "type": "Group",
+        "config": {
+          "label": "Series Books",
+          "fields": {
+            "seriesbook": {
+              "type": "Link",
+              "config": {
+                "label": "Series Book",
+                "select": "document",
+                "customtypes": [
+                  "book"
+                ]
+              }
+            }
+          }
         }
       }
     }

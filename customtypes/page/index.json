@@ -8,7 +8,7 @@
       "pagetitle": {
         "type": "Text",
         "config": {
-          "label": "PageTitle",
+          "label": "Page Title",
           "placeholder": ""
         }
       },
@@ -22,7 +22,7 @@
       "pagemetaimage": {
         "type": "Image",
         "config": {
-          "label": "PageMetaImage",
+          "label": "Page Meta Image",
           "constraint": {},
           "thumbnails": []
         }
@@ -30,7 +30,7 @@
       "pagemetadescription": {
         "type": "Text",
         "config": {
-          "label": "PageMetaDescription",
+          "label": "Page Meta Description",
           "placeholder": ""
         }
       },

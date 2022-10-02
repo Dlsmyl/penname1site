@@ -8,6 +8,10 @@ import Layout from '../components/Layout/Layout'
 const Page = ({ page, navigation, settings }) => {
   return (
     <Layout {...navigation}>
+      <h1 className="prose md:prose-lg lg:prose-xl xl:prose-2xl mx-auto px-4 md:px-0 font-abril text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 md:my-6 lg:my-8 xl:my-10">
+        {page.data.pagetitle}
+      </h1>
+      <div className="min-h-[3px] rounded bg-gradient-to-r from-transparent via-accent to-transparent mb-2 md:mb-4 lg:mb-6 xl:mb-8" />
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   )

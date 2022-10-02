@@ -68,9 +68,10 @@ const HeroWithFigure = ({ slice }) => {
             >
               <PrismicNextImage
                 field={herofigure}
-                imgixParams={{ h: 360, w: 250 }}
+                imgixParams={{ h: 400, w: 260 }}
                 className="max-w-sm rounded-lg shadow-2xl"
               />
+              <span className="sr-only">{herofigure.alt}</span>
             </a>
           </Link>
         ) : (

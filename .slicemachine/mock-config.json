@@ -15,9 +15,14 @@
     "series": {
       "seriesname": {
         "content": "The Fresh Beginnings Series"
-      }
+      },
+      "seriesbooks": {}
     },
-    "page": {}
+    "page": {
+      "pagetitle": {
+        "content": "Page Title Goes Here"
+      }
+    }
   },
   "slices": {
     "HeroWithFigure": {
