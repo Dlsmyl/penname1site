@@ -3,7 +3,6 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import { PrismicNextImage } from '@prismicio/next'
 
 const SeriesHero = ({ slice }) => {
-  console.log(slice)
   const components = {
     heading2: ({ node, children }) => (
       <h2
