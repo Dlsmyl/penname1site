@@ -84,7 +84,7 @@ const HeroWithFigure = ({ slice }) => {
         )}
         <div className="text-center md:text-left">
           <h2
-            className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold  ${
+            className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-abril ${
               variation === 'heroWithBackgroundImage'
                 ? ` text-secondary-focus`
                 : ``
