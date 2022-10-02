@@ -61,7 +61,11 @@ const HeroWithFigure = ({ slice }) => {
       >
         {herobuttonlink ? (
           <Link href={herobuttonlink.url}>
-            <a className="transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3 shrink-0">
+            <a
+              className={`transition duration-300 ease-in-out hover:scale-105 ${
+                herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
+              } shrink-0`}
+            >
               <PrismicNextImage
                 field={herofigure}
                 imgixParams={{ h: 360, w: 250 }}
@@ -73,7 +77,9 @@ const HeroWithFigure = ({ slice }) => {
           <PrismicNextImage
             field={herofigure}
             alt={herofigure.alt || ''}
-            className="max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 hover:-rotate-3"
+            className={`max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
+              herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
+            }`}
           />
         )}
         <div className="text-center md:text-left">
