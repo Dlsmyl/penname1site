@@ -18,6 +18,7 @@ const SeriesHero = ({ slice }) => {
         {children}
       </h2>
     ),
+    paragraph: ({ node, children }) => <p className={`px-4`}>{children}</p>,
   }
   return (
     <section className="max-w-screen-lg mx-auto">
