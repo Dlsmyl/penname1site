@@ -3,6 +3,18 @@ import { PrismicRichText } from '@prismicio/react'
 
 const Prose = ({ slice }) => {
   const components = {
+    heading1: ({ node, children }) => (
+      <h1 className={`my-4  font-abril`}>{children}</h1>
+    ),
+    heading2: ({ node, children }) => (
+      <h2 className={`my-4  font-abril`}>{children}</h2>
+    ),
+    heading3: ({ node, children }) => (
+      <h3 className={`my-4  font-abril`}>{children}</h3>
+    ),
+    heading4: ({ node, children }) => (
+      <h4 className={`my-4  font-abril`}>{children}</h4>
+    ),
     paragraph: ({ node, children }) => <p className={`my-4 `}>{children}</p>,
   }
   return (
