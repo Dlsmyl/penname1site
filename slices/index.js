@@ -2,12 +2,14 @@
 
 import Carousel from './Carousel';
 import HeroWithFigure from './HeroWithFigure';
+import NewsletterSignUp from './NewsletterSignUp';
 import Prose from './Prose';
 import SeriesHero from './SeriesHero';
 
 export {
 	Carousel,
 	HeroWithFigure,
+	NewsletterSignUp,
 	Prose,
 	SeriesHero,
 };
@@ -15,6 +17,7 @@ export {
 export const components = {
 	carousel: Carousel,
 	hero_with_figure: HeroWithFigure,
+	mailer_lite_sign_up: NewsletterSignUp,
 	prose: Prose,
 	series_hero: SeriesHero,
 };

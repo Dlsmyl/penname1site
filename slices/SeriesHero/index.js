@@ -21,13 +21,13 @@ const SeriesHero = ({ slice }) => {
     paragraph: ({ node, children }) => <p className={`px-4`}>{children}</p>,
   }
   return (
-    <section className="max-w-screen-lg mx-auto">
+    <section className="w-full mx-auto">
       <PrismicRichText field={slice.primary.title} components={components} />
       <PrismicRichText field={slice.primary.subtitle} components={components} />
       <hr />
-      <div className=" grid grid-flow-row md:grid-flow-col md:auto-col-auto place-items-center">
+      <div className={`flex justify-center flex-wrap space-x-4`}>
         {slice?.items?.map((item, i) => (
-          <div key={item.series.id} className="my-4">
+          <div key={item.series.id} className="my-4 flex-0">
             <PrismicLink field={item.series.data.boxsetlink}>
               <PrismicNextImage
                 field={item.series.data.seriesimage}

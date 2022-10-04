@@ -36,6 +36,9 @@
             },
             "series_hero": {
               "type": "SharedSlice"
+            },
+            "mailer_lite_sign_up": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -481,6 +481,138 @@
           }
         }
       },
+      "mailer_lite_sign_up": {
+        "library": "slices",
+        "id": "mailer_lite_sign_up",
+        "name": "NewsletterSignUp",
+        "description": "MailerLiteSignUp",
+        "model": {
+          "id": "mailer_lite_sign_up",
+          "type": "SharedSlice",
+          "name": "NewsletterSignUp",
+          "description": "MailerLiteSignUp",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "MailerLiteSignUp",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "Sign-up Call to Action",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "The reason to subscribe...",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "placeholdertext": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Placeholder Text",
+                    "placeholder": "What the empty field says"
+                  }
+                },
+                "buttontext": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": "What the button says"
+                  }
+                },
+                "formlocation": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Form Location",
+                    "placeholder_false": "Left",
+                    "placeholder_true": "Right",
+                    "default_value": false
+                  }
+                },
+                "buttoncolor": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Button Color",
+                    "placeholder": "Select button color",
+                    "options": [
+                      "primary",
+                      "secondary",
+                      "accent",
+                      "info",
+                      "neutral",
+                      "success",
+                      "warning",
+                      "error"
+                    ]
+                  }
+                },
+                "mailerlitegroupid": {
+                  "type": "Text",
+                  "config": {
+                    "label": "MailerLiteGroupId",
+                    "placeholder": "The id# of the group to join"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Exercise",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Dolore ea cupidatat enim in reprehenderit eu sit sint ipsum dolor mollit nostrud aute in cillum.",
+                  "spans": []
+                }
+              ],
+              "placeholdertext": "fallen",
+              "buttontext": "however",
+              "formlocation": false,
+              "buttoncolor": "primary",
+              "mailerlitegroupid": "gun"
+            },
+            "slice_type": "mailer_lite_sign_up"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/home/nmastroianni/linuxDev/next/penname1site/slices/NewsletterSignUp/default/preview.png",
+            "width": 565,
+            "height": 289
+          }
+        }
+      },
       "prose": {
         "library": "slices",
         "id": "prose",
