@@ -48,7 +48,6 @@ const MailerLiteSignUp = ({ slice }) => {
   }
 
   const addSubscriber = async emailAddress => {
-    console.log('addSubscriber run', emailAddress)
     submitData(emailAddress)
   }
   const {

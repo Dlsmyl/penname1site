@@ -32,7 +32,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).send('Method not allowed')
   }
-  const API_KEY = process.env.NMAILERLITE_API_KEY
+  const API_KEY = process.env.MAILERLITE_API_KEY
   const mailerLiteResult = await addSubscriber(
     req.body.email,
     API_KEY,
