@@ -1,10 +1,55 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import axios from 'axios'
+import { useForm } from 'react-hook-form'
 
 const MailerLiteSignUp = ({ slice }) => {
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log('handling submit')
+  const [isDisabled, setIsDisabled] = React.useState(false)
+  const [success, setSuccess] = React.useState(null)
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
+
+  const submitData = async formData => {
+    setIsDisabled(true)
+    try {
+      const { email } = formData
+      const groupIds = slice.items.map(item => item.mailerlitegroupid)
+      await axios({
+        url: '/api/newsletter',
+        method: 'POST',
+        data: { email, groupIds },
+      }).then(res => {
+        if (res.status === 200) {
+          reset()
+          setSuccess(true)
+          setTimeout(() => {
+            setSuccess(null)
+            setIsDisabled(false)
+          }, 3000)
+        } else {
+          console.log('res.status not 200')
+          setSuccess(false)
+          reset()
+        }
+      })
+    } catch (err) {
+      if (err.response) {
+        console.log('server responded with non 2xx code: ', err.response.data)
+      } else if (err.request) {
+        console.log('no response received: ', err.request)
+      } else {
+        console.log('Error setting up response: ', err.message)
+      }
+    }
+  }
+
+  const addSubscriber = async emailAddress => {
+    console.log('addSubscriber run', emailAddress)
+    submitData(emailAddress)
   }
   const {
     primary: {
@@ -12,7 +57,6 @@ const MailerLiteSignUp = ({ slice }) => {
       buttontext,
       description,
       formlocation,
-      mailerlitegroupid,
       placeholdertext,
       title,
     },
@@ -65,19 +109,45 @@ const MailerLiteSignUp = ({ slice }) => {
         <PrismicRichText field={title} components={components} />
         <PrismicRichText field={description} />
       </div>
-      <form className="grid grid-rows-2 gap-y-4">
-        <input
-          type="text"
-          placeholder={placeholdertext}
-          className={`input input-bordered input-primary w-full max-w-s self-end`}
-        />
-        <input
-          type={'submit'}
-          className={`btn ${buttonColor}`}
-          value={buttontext}
-          onClick={handleSubmit}
-        />
-      </form>
+      {success === null && (
+        <form
+          className="grid grid-rows-2 gap-y-4"
+          onSubmit={handleSubmit(addSubscriber)}
+        >
+          <label htmlFor="email" className="sr-only">
+            What is your email address?
+          </label>
+          <input
+            name="email"
+            type="email"
+            placeholder={placeholdertext}
+            {...register('email', {
+              required: 'Your email address is required.',
+            })}
+            className={`input input-bordered input-primary w-full max-w-s self-end`}
+          />
+          {errors.email && (
+            <p className="text-error"> &uarr; {errors.email.message}</p>
+          )}
+          <input
+            type={'submit'}
+            className={`btn ${buttonColor} ${isDisabled ? `btn-disabled` : ``}`}
+            value={buttontext}
+          />
+        </form>
+      )}
+      {success === true && (
+        <div className="grid grid-rows-1 place-items-center">
+          <p className="prose-xl">I 💗 You! Thank you for subscribing.</p>
+        </div>
+      )}
+      {success === false && (
+        <div className="grid grid-rows-1 place-items-center">
+          <p className="prose-xl">
+            😔 Something went wrong behind the scenes. Please try again later.
+          </p>
+        </div>
+      )}
     </section>
   )
 }

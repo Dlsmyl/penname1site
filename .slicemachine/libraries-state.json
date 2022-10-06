@@ -556,16 +556,24 @@
                       "error"
                     ]
                   }
+                }
+              },
+              "items": {
+                "mailerlitegroupname": {
+                  "type": "Text",
+                  "config": {
+                    "label": "MailerLiteGroupName",
+                    "placeholder": ""
+                  }
                 },
                 "mailerlitegroupid": {
                   "type": "Text",
                   "config": {
-                    "label": "MailerLiteGroupId",
-                    "placeholder": "The id# of the group to join"
+                    "label": "MailerLite Group ID",
+                    "placeholder": "enter the group ID #"
                   }
                 }
               },
-              "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -575,28 +583,30 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "mailerlitegroupname": "any",
+                "mailerlitegroupid": "draw"
+              }
             ],
             "primary": {
               "title": [
                 {
                   "type": "heading2",
-                  "text": "Exercise",
+                  "text": "Moving",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Dolore ea cupidatat enim in reprehenderit eu sit sint ipsum dolor mollit nostrud aute in cillum.",
+                  "text": "Dolor pariatur aliquip amet nulla magna ad Lorem laboris ut cupidatat incididunt anim mollit ipsum. Pariatur nostrud officia minim enim excepteur Lorem nisi amet nisi sint aliquip.",
                   "spans": []
                 }
               ],
-              "placeholdertext": "fallen",
-              "buttontext": "however",
+              "placeholdertext": "form",
+              "buttontext": "arm",
               "formlocation": false,
-              "buttoncolor": "primary",
-              "mailerlitegroupid": "gun"
+              "buttoncolor": "secondary"
             },
             "slice_type": "mailer_lite_sign_up"
           }
