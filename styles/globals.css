@@ -6,3 +6,6 @@
 .headroom-wrapper > div {
   @apply bg-accent shadow-sm;
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}

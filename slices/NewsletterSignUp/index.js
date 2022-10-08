@@ -13,7 +13,7 @@ const MailerLiteSignUp = ({ slice }) => {
     formState: { errors },
   } = useForm()
 
-  const submitData = async formData => {
+  const submitData = async (formData, token) => {
     setIsDisabled(true)
     try {
       const { email } = formData
@@ -21,7 +21,7 @@ const MailerLiteSignUp = ({ slice }) => {
       await axios({
         url: '/api/newsletter',
         method: 'POST',
-        data: { email, groupIds },
+        data: { email, groupIds, token },
       }).then(res => {
         if (res.status === 200) {
           reset()
@@ -48,7 +48,15 @@ const MailerLiteSignUp = ({ slice }) => {
   }
 
   const addSubscriber = async emailAddress => {
-    submitData(emailAddress)
+    window.grecaptcha.ready(() => {
+      window.grecaptcha
+        .execute('6LdegF8iAAAAADDOMwVAXSvPRZwr2GC_O_5cxNgs', {
+          action: 'submit',
+        })
+        .then(token => {
+          submitData(emailAddress, token)
+        })
+    })
   }
   const {
     primary: {
@@ -113,29 +121,43 @@ const MailerLiteSignUp = ({ slice }) => {
       </div>
       {success === null && (
         <form
-          className="grid grid-rows-2 gap-y-4"
+          className="flex flex-col gap-y-4"
           onSubmit={handleSubmit(addSubscriber)}
         >
-          <label htmlFor="email" className="sr-only">
-            What is your email address?
+          <label htmlFor="email" className="">
+            <span className="sr-only">What is your email address?</span>
+            <input
+              name="email"
+              type="email"
+              placeholder={placeholdertext}
+              {...register('email', {
+                required: 'Your email address is required.',
+              })}
+              className={`input input-bordered input-primary w-full max-w-s self-end`}
+            />
           </label>
-          <input
-            name="email"
-            type="email"
-            placeholder={placeholdertext}
-            {...register('email', {
-              required: 'Your email address is required.',
-            })}
-            className={`input input-bordered input-primary w-full max-w-s self-end`}
-          />
+
           {errors.email && (
             <p className="text-error"> &uarr; {errors.email.message}</p>
           )}
-          <input
-            type={'submit'}
-            className={`btn ${buttonColor} ${isDisabled ? `btn-disabled` : ``}`}
-            value={buttontext}
-          />
+          <div>
+            <input
+              type={'submit'}
+              className={`btn w-full ${buttonColor} ${
+                isDisabled ? `btn-disabled` : ``
+              }`}
+              value={buttontext}
+            />
+            <p className="prose prose-sm prose-a:text-neutral prose-a:no-underline hover:prose-a:underline">
+              This site is protected by reCAPTCHA and the{' '}
+              <a href="https://policies.google.com/privacy">
+                Google Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a href="https://policies.google.com/terms">Terms of Service</a>{' '}
+              apply.
+            </p>
+          </div>
         </form>
       )}
       {success === true && (

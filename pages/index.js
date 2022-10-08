@@ -63,7 +63,9 @@ export default function Home({ page, navigation, settings }) {
           />
         )}
       </Head>
-      <SliceZone slices={page.data.slices} components={components} />
+      <div className="grid grid-cols-1 gap-y-4 md:gap-y-0">
+        <SliceZone slices={page.data.slices} components={components} />
+      </div>
     </Layout>
   )
 }
