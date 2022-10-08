@@ -1,54 +1,35 @@
+import { PrismicNextImage } from '@prismicio/next'
+import { PrismicLink } from '@prismicio/react'
 import * as React from 'react'
-
-const Navbar = props => {
+import Headroom from 'react-headroom'
+import HeadlessMenu from './Menu'
+const Navbar = ({ logo, navigationlinks }) => {
   return (
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col">
-        <div className="w-full navbar bg-base-300">
-          <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-          <div className="flex-1 px-2 mx-2">Navbar Title</div>
-          <div className="flex-none hidden lg:block">
-            <ul className="menu menu-horizontal">
-              <li>
-                <a>Navbar Item 1</a>
-              </li>
-              <li>
-                <a>Navbar Item 2</a>
-              </li>
-            </ul>
-          </div>
+    <Headroom className="text-white">
+      <div className="flex justify-between items-center mx-auto py-3 px-2 md:px-6">
+        <div
+          className="flex justify-start items-center text-primary-content"
+          id="branding"
+        >
+          {logo.url ? <PrismicNextImage field={logo} /> : 'Jamie Whitmann'}
         </div>
-        Content
+        <nav>
+          <HeadlessMenu links={navigationlinks} />
+          <ul className="menu menu-horizontal hidden md:block text-primary-content">
+            {navigationlinks.length &&
+              navigationlinks.map(link => {
+                return (
+                  <li key={link.menuitem.id}>
+                    <PrismicLink field={link.menuitem}>
+                      {link.menuitemtext}
+                    </PrismicLink>
+                  </li>
+                )
+              })}
+          </ul>
+        </nav>
       </div>
-      <div className="drawer-side">
-        <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </Headroom>
   )
 }
 

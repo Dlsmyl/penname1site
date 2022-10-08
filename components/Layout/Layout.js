@@ -1,69 +1,32 @@
 import * as React from 'react'
 import Link from 'next/link'
+import Navbar from '../Navbar'
 import Footer from './Footer'
+import { BsArrowReturnLeft } from 'react-icons/bs'
 
-const Layout = ({ children, data: { navigationlinks } }) => {
+const Layout = ({ children, data: { logo, navigationlinks } }) => {
   return (
-    <div className="drawer">
-      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col min-h-screen">
-        <div className="w-full navbar bg-accent">
-          <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block w-6 h-6 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-          <div className="flex-1 px-2 mx-2 font-abril text-xl">
-            <Link href="/">
-              <a>Jamie Whitmann</a>
-            </Link>
-          </div>
-          <div className="flex-none hidden lg:block">
-            <ul className="menu menu-horizontal">
-              {navigationlinks.length
-                ? navigationlinks.map((link, i) => {
-                    return (
-                      <li key={`navigationlink${i}`}>
-                        <Link href={link.menuitem.url}>
-                          <a>{link.menuitemtext}</a>
-                        </Link>
-                      </li>
-                    )
-                  })
-                : ``}
-            </ul>
-          </div>
-        </div>
-        {children}
+    <div className="relative">
+      <ul id="nav-access" className="relative mx-auto">
+        <li>
+          <a
+            href="#main-content"
+            className="absolute z-50 -top-20 sm:left-1/4 text-2xl text-base-100 inline-block w-full sm:w-1/2 text-center bg-primary-content bg-opacity-30 transform focus:translate-y-20 transition-all duration-500 ease-in-out"
+          >
+            Skip to main content{' '}
+            <span className="text-gray-800 px-3 py-0 bg-secondary text-base rounded-sm">
+              Return
+              <BsArrowReturnLeft className="w-3 h-3 inline text-gray-800 ml-1" />
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div className="flex flex-col min-h-screen">
+        <header>
+          <Navbar logo={logo} navigationlinks={navigationlinks} />
+        </header>
+        <main id="main-content">{children}</main>
         <Footer />
-      </div>
-      <div className="drawer-side">
-        <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
-          {navigationlinks.length
-            ? navigationlinks.map((link, i) => {
-                return (
-                  <li key={`drawerlink${i}`}>
-                    <Link href={link.menuitem.url}>
-                      <a>{link.menuitemtext}</a>
-                    </Link>
-                  </li>
-                )
-              })
-            : ``}
-        </ul>
       </div>
     </div>
   )

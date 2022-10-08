@@ -11,12 +11,21 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+    },
     "navigationlinks": [
       {
-        "menuitemtext": "weather",
+        "menuitemtext": "trail",
         "menuitem": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://prismic.io"
         }
       }
     ]

@@ -8,7 +8,7 @@ const HeroWithFigure = ({ slice }) => {
   const components = {
     paragraph: ({ node, children }) => (
       <p
-        className={`my-4 text-left ${
+        className={`my-4 text-left prose md:prose-lg lg:prose-xl ${
           variation === 'heroWithBackgroundImage' ? ` text-white` : ``
         }`}
       >
@@ -62,9 +62,9 @@ const HeroWithFigure = ({ slice }) => {
         {herobuttonlink ? (
           <Link href={herobuttonlink.url}>
             <a
-              className={`transition duration-300 ease-in-out hover:scale-105 ${
+              className={`focus:outline-none focus:ring-2 focus:ring-primary focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-opacity-75 rounded transition duration-300 ease-in-out hover:scale-105 ${
                 herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
-              } shrink-0`}
+              } shrink-0 `}
             >
               <PrismicNextImage
                 field={herofigure}
@@ -83,7 +83,7 @@ const HeroWithFigure = ({ slice }) => {
             }`}
           />
         )}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left max-w-screen-sm mx-auto">
           <h2
             className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-abril ${
               variation === 'heroWithBackgroundImage'
@@ -95,7 +95,7 @@ const HeroWithFigure = ({ slice }) => {
           </h2>
           <PrismicRichText field={herotext} components={components} />
           {herobuttonlink && (
-            <PrismicLink field={herobuttonlink} className="btn btn-secondary">
+            <PrismicLink field={herobuttonlink} className="btn btn-accent">
               {herobuttontext}
             </PrismicLink>
           )}

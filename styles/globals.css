@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.headroom-wrapper > div {
+  @apply bg-accent shadow-sm;
+}

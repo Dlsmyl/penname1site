@@ -9,7 +9,7 @@ const Footer = () => {
           <a className="link link-hover">Privacy</a>
         </Link>
       </div>
-      <div>
+      <div className="text-center md:text-left">
         <p>Copyright © 2022 - All right reserved by Jamie Whitmann</p>
       </div>
     </footer>
