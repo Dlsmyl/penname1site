@@ -36,7 +36,7 @@ const recaptchaValidation = async token => {
         method: 'POST',
         params: {
           secret: process.env.RECAPTCHA_SECRET_KEY,
-          response: recaptchaToken,
+          response: token,
         },
       })
       return { successful: true, message: response.data.score }
