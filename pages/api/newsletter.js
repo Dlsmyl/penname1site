@@ -52,6 +52,7 @@ const recaptchaValidation = async token => {
           response: token,
         },
       })
+      console.log('RESPONSE ******************** ', response)
       return { successful: true, message: response.data.score }
     } catch (error) {
       let message
@@ -93,7 +94,7 @@ export default async function handler(req, res) {
     }
   } else {
     // Make sure the value returned is numeric
-    const googleCaptchaScore = Number(recaptchaValidationResult.message)
+    const googleCaptchaScore = Number(recaptchaResult.message)
     // Arbitrarily setting the threshold of suspicion @ 0.7 adjust as needed
     if (googleCaptchaScore > 0.7) {
       const API_KEY = process.env.MAILERLITE_API_KEY
