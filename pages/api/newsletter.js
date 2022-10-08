@@ -84,12 +84,12 @@ export default async function handler(req, res) {
   }
   // Check if Google thinks this interaction is suspicious
   const recaptchaResult = await recaptchaValidation(token)
-  if (!recaptchaValidationResult.successful) {
+  if (!recaptchaResult.successful) {
     // this is sent if the recaptcha was not successful
     // res.status(400).send(recaptchaValidationResult.message);
     return {
       statusCode: 400,
-      body: recaptchaValidationResult.message,
+      body: recaptchaResult.message,
     }
   } else {
     // Make sure the value returned is numeric
