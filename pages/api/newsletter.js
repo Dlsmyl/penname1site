@@ -1,5 +1,13 @@
 import axios from 'axios'
 
+/**
+ * It takes an email address, an API key, and an array of lists, and adds the email address to the
+ * lists
+ * @param address - The email address of the subscriber
+ * @param key - Your MailerLite API key
+ * @param lists - An array of list IDs that you want to add the subscriber to.
+ * @returns An object with a successful key and a message key.
+ */
 const addSubscriber = async (address, key, lists) => {
   const result = await (async () => {
     const baseUrl = 'https://connect.mailerlite.com'
@@ -28,6 +36,11 @@ const addSubscriber = async (address, key, lists) => {
   return result
 }
 
+/**
+ * It takes a reCAPTCHA token, sends it to Google's reCAPTCHA server, and returns the result of the
+ * validation
+ * @returns An object with two properties: successful and message.
+ */
 const recaptchaValidation = async token => {
   const result = await (async () => {
     try {
@@ -55,6 +68,13 @@ const recaptchaValidation = async token => {
   return result
 }
 
+/**
+ * We're using the Google Recaptcha API to check if the user is a bot. If they're not a bot, we're
+ * adding them to our MailerLite list
+ * @param req - The request object
+ * @param res - the response object
+ * @returns an object with a statusCode and a body.
+ */
 export default async function handler(req, res) {
   const {
     body: { email, groupIds, token },
@@ -64,7 +84,6 @@ export default async function handler(req, res) {
   }
   // Check if Google thinks this interaction is suspicious
   const recaptchaResult = await recaptchaValidation(token)
-
   if (!recaptchaValidationResult.successful) {
     // this is sent if the recaptcha was not successful
     // res.status(400).send(recaptchaValidationResult.message);
@@ -75,8 +94,8 @@ export default async function handler(req, res) {
   } else {
     // Make sure the value returned is numeric
     const googleCaptchaScore = Number(recaptchaValidationResult.message)
-    // Arbitrarily setting the threshold of suspicion @ 0.5 adjust as needed
-    if (googleCaptchaScore > 0.6) {
+    // Arbitrarily setting the threshold of suspicion @ 0.7 adjust as needed
+    if (googleCaptchaScore > 0.7) {
       const API_KEY = process.env.MAILERLITE_API_KEY
       const mailerLiteResult = await addSubscriber(email, API_KEY, groupIds)
       if (mailerLiteResult.successful) {
@@ -84,6 +103,8 @@ export default async function handler(req, res) {
       } else {
         res.status(400).send('Error with MailerLite integration')
       }
+    } else {
+      res.status(400).send('Action not taken. Possible bot detected')
     }
   }
 }
