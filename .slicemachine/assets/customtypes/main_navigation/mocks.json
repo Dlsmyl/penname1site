@@ -18,15 +18,24 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
     },
     "navigationlinks": [
       {
-        "menuitemtext": "trail",
+        "menuitemtext": "accident",
         "menuitem": {
           "link_type": "Web",
-          "url": "https://prismic.io"
+          "url": "http://twitter.com"
         }
+      }
+    ],
+    "sociallinks": [
+      {
+        "sociallink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "socialplatform": "Twitter"
       }
     ]
   }

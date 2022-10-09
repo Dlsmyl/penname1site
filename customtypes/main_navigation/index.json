@@ -36,6 +36,35 @@
             }
           }
         }
+      },
+      "sociallinks": {
+        "type": "Group",
+        "config": {
+          "label": "SocialLinks",
+          "fields": {
+            "sociallink": {
+              "type": "Link",
+              "config": {
+                "label": "SocialLink",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "socialplatform": {
+              "type": "Select",
+              "config": {
+                "label": "SocialPlatform",
+                "placeholder": "",
+                "options": [
+                  "Facebook",
+                  "Instagram",
+                  "TikTok",
+                  "Twitter"
+                ]
+              }
+            }
+          }
+        }
       }
     }
   }

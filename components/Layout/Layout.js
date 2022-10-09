@@ -4,7 +4,7 @@ import Navbar from '../Navbar'
 import Footer from './Footer'
 import { BsArrowReturnLeft } from 'react-icons/bs'
 
-const Layout = ({ children, data: { logo, navigationlinks } }) => {
+const Layout = ({ children, data: { logo, navigationlinks, sociallinks } }) => {
   return (
     <div className="relative">
       <ul id="nav-access" className="relative mx-auto">
@@ -23,7 +23,11 @@ const Layout = ({ children, data: { logo, navigationlinks } }) => {
       </ul>
       <div className="flex flex-col min-h-screen">
         <header>
-          <Navbar logo={logo} navigationlinks={navigationlinks} />
+          <Navbar
+            logo={logo}
+            navigationlinks={navigationlinks}
+            sociallinks={sociallinks}
+          />
         </header>
         <main id="main-content">{children}</main>
         <Footer />
