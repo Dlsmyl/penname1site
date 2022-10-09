@@ -67,6 +67,7 @@ const MailerLiteSignUp = ({ slice }) => {
       placeholdertext,
       title,
     },
+    id,
   } = slice
   let formSide
   switch (formlocation) {
@@ -124,16 +125,16 @@ const MailerLiteSignUp = ({ slice }) => {
           className="flex flex-col gap-y-4"
           onSubmit={handleSubmit(addSubscriber)}
         >
-          <label htmlFor="email" className="">
+          <label htmlFor={`email_${id}`}>
             <span className="sr-only">What is your email address?</span>
             <input
-              name="email"
+              name={`email_${id}`}
               type="email"
               placeholder={placeholdertext}
-              {...register('email', {
+              {...register(`email_${id}`, {
                 required: 'Your email address is required.',
               })}
-              className={`input input-bordered input-primary w-full max-w-s self-end`}
+              className={`what input input-bordered input-primary w-full max-w-s self-end`}
             />
           </label>
 

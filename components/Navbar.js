@@ -1,5 +1,6 @@
 import { PrismicNextImage } from '@prismicio/next'
 import { PrismicLink } from '@prismicio/react'
+import Link from 'next/link'
 import * as React from 'react'
 import Headroom from 'react-headroom'
 import HeadlessMenu from './Menu'
@@ -11,16 +12,23 @@ const Navbar = ({ logo, navigationlinks }) => {
           className="flex justify-start items-center text-primary-content"
           id="branding"
         >
-          {logo.url ? <PrismicNextImage field={logo} /> : 'Jamie Whitmann'}
+          <Link href="/">
+            <a>
+              {logo.url ? <PrismicNextImage field={logo} /> : 'Jamie Whitmann'}
+            </a>
+          </Link>
         </div>
         <nav>
           <HeadlessMenu links={navigationlinks} />
-          <ul className="menu menu-horizontal hidden md:block text-primary-content">
+          <ul className="hidden rounded-box text-primary-content md:grid grid-flow-col gap-x-4">
             {navigationlinks.length &&
               navigationlinks.map(link => {
                 return (
                   <li key={link.menuitem.id}>
-                    <PrismicLink field={link.menuitem}>
+                    <PrismicLink
+                      field={link.menuitem}
+                      className="hover:bg-accent-focus hover:bg-opacity-50 rounded px-6 py-4"
+                    >
                       {link.menuitemtext}
                     </PrismicLink>
                   </li>
