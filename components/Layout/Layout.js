@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '../Navbar'
 import Footer from './Footer'
 import { BsArrowReturnLeft } from 'react-icons/bs'
+import Consent from './Consent'
 
 const Layout = ({ children, data: { logo, navigationlinks, sociallinks } }) => {
   return (
@@ -31,6 +32,7 @@ const Layout = ({ children, data: { logo, navigationlinks, sociallinks } }) => {
         </header>
         <main id="main-content">{children}</main>
         <Footer />
+        <Consent />
       </div>
     </div>
   )

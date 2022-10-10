@@ -11,7 +11,6 @@ import {
   FaTwitterSquare,
 } from 'react-icons/fa'
 const Navbar = ({ logo, navigationlinks, sociallinks }) => {
-  console.log(sociallinks)
   return (
     <Headroom className="text-white">
       <div className="flex justify-between items-center mx-auto py-3 px-2 md:px-6">

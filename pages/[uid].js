@@ -47,7 +47,7 @@ const Page = ({ page, navigation, settings }) => {
   return (
     <Layout {...navigation}>
       <Head>
-        <title>{page.data.pagetitle} • JamieWhitmann.com</title>
+        <title>{`${page.data.pagetitle} • JamieWhitmann.com`}</title>
         <meta
           name="description"
           content={
