@@ -1,6 +1,7 @@
 import React from 'react'
 import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import Link from 'next/link'
+import Image from 'next/future/image'
 import { PrismicNextImage } from '@prismicio/next'
 
 const HeroWithFigure = ({ slice }) => {
@@ -67,9 +68,11 @@ const HeroWithFigure = ({ slice }) => {
                 herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
               } shrink-0 `}
             >
-              <PrismicNextImage
-                field={herofigure}
-                imgixParams={{ h: 400, w: 260 }}
+              <Image
+                src={herofigure.url}
+                width={260}
+                height={400}
+                alt={herofigure.alt || ''}
                 className="max-w-sm rounded-lg shadow-2xl"
                 priority={lcp}
               />
@@ -77,8 +80,10 @@ const HeroWithFigure = ({ slice }) => {
             </a>
           </Link>
         ) : (
-          <PrismicNextImage
-            field={herofigure}
+          <Image
+            src={herofigure.url}
+            width={260}
+            height={400}
             alt={herofigure.alt || ''}
             priority={lcp}
             className={`max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
