@@ -9,7 +9,6 @@ import Layout from '../components/Layout/Layout'
 
 const Page = ({ page, navigation, settings }) => {
   const router = useRouter()
-  console.log(router)
   let sliceTypes = []
   page.data.slices.forEach(slice => sliceTypes.push(slice.slice_type))
   const formOnPage = sliceTypes.indexOf('mailer_lite_sign_up') > 0
