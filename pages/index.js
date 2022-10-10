@@ -7,6 +7,9 @@ import Layout from '../components/Layout/Layout'
 export default function Home({ page, navigation, settings }) {
   let sliceTypes = []
   page.data.slices.forEach(slice => sliceTypes.push(slice.slice_type))
+  if (sliceTypes[0] === 'hero_with_figure') {
+    page.data.slices[0].lcp = true
+  }
   const formOnPage = sliceTypes.indexOf('mailer_lite_sign_up') > 0
   React.useEffect(() => {
     if (formOnPage) {

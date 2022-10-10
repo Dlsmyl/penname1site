@@ -17,6 +17,7 @@ const HeroWithFigure = ({ slice }) => {
     ),
   }
   const {
+    lcp = false,
     primary: {
       herofigure,
       herofigurelocation,
@@ -70,6 +71,7 @@ const HeroWithFigure = ({ slice }) => {
                 field={herofigure}
                 imgixParams={{ h: 400, w: 260 }}
                 className="max-w-sm rounded-lg shadow-2xl"
+                priority={lcp}
               />
               <span className="sr-only">{herofigure.alt}</span>
             </a>
@@ -78,6 +80,7 @@ const HeroWithFigure = ({ slice }) => {
           <PrismicNextImage
             field={herofigure}
             alt={herofigure.alt || ''}
+            priority={lcp}
             className={`max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
               herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
             }`}
