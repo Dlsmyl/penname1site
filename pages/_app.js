@@ -19,6 +19,15 @@ export default function App({ Component, pageProps }) {
     >
       <PrismicPreview repositoryName={repositoryName}>
         <Head>
+          <link rel="preconnect" href="https://images.prismic.io" crossorigin />
+          <link rel="dns-prefetch" href="https://images.prismic.io" />
+
+          <link
+            rel="preconnect"
+            href="https://prismic-io.s3.amazonaws.com"
+            crossorigin
+          />
+          <link rel="dns-prefetch" href="https://prismic-io.s3.amazonaws.com" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

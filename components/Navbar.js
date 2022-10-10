@@ -56,6 +56,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                   sociallink: { url },
                   socialplatform,
                 } = link
+                let srmessage = `Visit us on ${socialplatform}`
                 return (
                   <li key={url}>
                     <PrismicLink
@@ -73,6 +74,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                       ) : (
                         'Icon Not Found'
                       )}
+                      <span className="sr-only">{srmessage}</span>
                     </PrismicLink>
                   </li>
                 )
