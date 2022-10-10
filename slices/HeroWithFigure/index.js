@@ -62,35 +62,20 @@ const HeroWithFigure = ({ slice }) => {
         }`}
       >
         {herobuttonlink ? (
-          <Link href={herobuttonlink.url}>
-            <a
-              className={`focus:outline-none focus:ring-2 focus:ring-primary focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-opacity-75 rounded transition duration-300 ease-in-out hover:scale-105 ${
-                herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
-              } shrink-0 `}
-            >
-              {/* <Image
-                src={herofigure.url}
-                width={260}
-                height={400}
-                alt={herofigure.alt || ''}
-                className="max-w-sm rounded-lg shadow-2xl"
-                priority={lcp}
-              /> */}
-              <PrismicNextImage field={herofigure} priority={lcp} />
-              <span className="sr-only">{herofigure.alt}</span>
-            </a>
-          </Link>
+          <PrismicLink
+            field={herobuttonlink}
+            className={`h-[400px] focus:outline-none focus:ring-2 focus:ring-primary focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-opacity-75 transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl ${
+              herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
+            } `}
+          >
+            <PrismicNextImage
+              field={herofigure}
+              priority={lcp}
+              className="max-w-sm rounded"
+            />
+            <span className="sr-only">{herofigure.alt}</span>
+          </PrismicLink>
         ) : (
-          // <Image
-          //   src={herofigure.url}
-          //   width={260}
-          //   height={400}
-          //   alt={herofigure.alt || ''}
-          //   priority={lcp}
-          //   className={`max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
-          //     herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
-          //   }`}
-          // />
           <PrismicNextImage
             field={herofigure}
             priority={lcp}
