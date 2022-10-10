@@ -26,6 +26,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                   alt={logo.alt || ''}
                   width={162}
                   height={60}
+                  priority={true}
                 />
               ) : (
                 'Jamie Whitmann'
