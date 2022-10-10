@@ -37,18 +37,18 @@ const Consent = () => {
   return (
     <div
       id="consent-banner"
-      className={`transition duration-500 ease-in opacity-0 fixed bottom-0 w-full p-3 bg-secondary grid md:grid-cols-5 ${
+      className={`transition duration-500 ease-in opacity-0 fixed bottom-0 w-full p-3 bg-secondary bg-opacity-95 grid md:grid-cols-5 ${
         consent ? 'hidden' : ''
       }`}
     >
-      <p className="prose prose-sm mx-auto text-center md:col-span-3">
+      <p className="prose prose-sm mx-auto md:col-span-3 px-6 text-left my-4">
         I respect your right to privacy. Period. If you wish to allow cookies, I
         will get to learn a few things like what pages my readers visit, what
         country they are from, how long they stay, etc. Please choose your
         preference below. Data are only collected if you accept (which is how it
         should be).
       </p>
-      <div className="flex md:col-span-2 items-center justify-evenly">
+      <div className="flex md:col-span-2 items-center justify-evenly my-4">
         <button
           className="absolute top-2 right-2"
           onClick={e => {
