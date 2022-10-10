@@ -15,7 +15,7 @@ const Sitemap = ({ pages }) => {
         if (page.type === 'homepage') {
           return (
             <url key={index}>
-              <loc>{origin}/</loc>
+              <loc>{origin}</loc>
               <lastmod>{lastModified}</lastmod>
             </url>
           )
