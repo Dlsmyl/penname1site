@@ -2,11 +2,14 @@ import * as React from 'react'
 import { SliceZone } from '@prismicio/react'
 import * as prismicH from '@prismicio/helpers'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 import Layout from '../components/Layout/Layout'
 
 const Page = ({ page, navigation, settings }) => {
+  const router = useRouter()
+  console.log(router)
   let sliceTypes = []
   page.data.slices.forEach(slice => sliceTypes.push(slice.slice_type))
   const formOnPage = sliceTypes.indexOf('mailer_lite_sign_up') > 0
@@ -48,6 +51,10 @@ const Page = ({ page, navigation, settings }) => {
     <Layout {...navigation}>
       <Head>
         <title>{`${page.data.pagetitle} • JamieWhitmann.com`}</title>
+        <link
+          rel="canonical"
+          href={`https://www.jamiewhitmann.com${router.asPath}`}
+        />
         <meta
           name="description"
           content={

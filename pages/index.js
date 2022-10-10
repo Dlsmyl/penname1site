@@ -48,6 +48,7 @@ export default function Home({ page, navigation, settings }) {
     <Layout {...navigation}>
       <Head>
         <title>Jamie Whitmann • Romance Author</title>
+        <link rel="canonical" href="https://www.jamiewhitmann.com" />
         <meta name="description" content={page.data.homepagemetadescription} />
         <meta
           property="og:description"
