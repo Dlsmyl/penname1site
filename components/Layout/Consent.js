@@ -14,7 +14,10 @@ const Consent = () => {
 
   const acceptCookie = () => {
     setConsent(true)
-    setCookie(`localConsent`, 'true', { maxAge: 60 * 60 * 24 * 365 })
+    setCookie(`localConsent`, 'true', {
+      maxAge: 60 * 60 * 24 * 365,
+      sameSite: true,
+    })
     gtag('consent', 'update', {
       ad_storage: 'granted',
       analytics_storage: 'granted',
@@ -23,7 +26,10 @@ const Consent = () => {
   }
   const denyCookie = () => {
     setConsent(true)
-    setCookie('localConsent', 'false', { maxAge: 60 * 60 * 24 * 14 })
+    setCookie('localConsent', 'false', {
+      maxAge: 60 * 60 * 24 * 14,
+      sameSite: true,
+    })
     console.log('denying cookies for 2 weeks')
   }
   const closeP = () => {

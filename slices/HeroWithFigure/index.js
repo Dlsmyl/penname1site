@@ -64,14 +64,17 @@ const HeroWithFigure = ({ slice }) => {
         {herobuttonlink ? (
           <PrismicLink
             field={herobuttonlink}
-            className={`h-[400px] focus:outline-none focus:ring-2 focus:ring-primary focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-opacity-75 transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl ${
+            className={`focus:outline-none focus:ring-2 focus:ring-primary focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-opacity-75 transition duration-300 ease-in-out hover:scale-105 ${
               herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
             } `}
           >
             <PrismicNextImage
               field={herofigure}
               priority={lcp}
-              className="max-w-sm rounded"
+              width="260"
+              height="400"
+              layout="intrinsic"
+              className="rounded"
             />
             <span className="sr-only">{herofigure.alt}</span>
           </PrismicLink>
@@ -79,6 +82,8 @@ const HeroWithFigure = ({ slice }) => {
           <PrismicNextImage
             field={herofigure}
             priority={lcp}
+            width="260"
+            height="400"
             className={`max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
               herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
             }`}
