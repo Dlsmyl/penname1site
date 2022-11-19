@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/future/image'
-import { PrismicLink } from '@prismicio/react'
-import { PrismicRichText } from '@prismicio/react'
+import Image from 'next/image'
+import PrismicNextLink from '../../components/PrismicNextLink'
 
 const Carousel = ({ slice }) => {
   return (
@@ -14,14 +13,14 @@ const Carousel = ({ slice }) => {
               key={slice.id + i}
               className="carousel-item w-full"
             >
-              <PrismicLink field={item.carouselimagelink}>
+              <PrismicNextLink field={item.carouselimagelink}>
                 <Image
                   src={item.carouselimage.url}
                   alt={item.carouselimage.alt || ''}
                   width={260}
                   height={400}
                 />
-              </PrismicLink>
+              </PrismicNextLink>
             </div>
           )
         })}

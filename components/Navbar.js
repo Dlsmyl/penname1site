@@ -1,5 +1,5 @@
-import Image from 'next/future/image'
-import { PrismicLink } from '@prismicio/react'
+import Image from 'next/image'
+import PrismicNextLink from './PrismicNextLink'
 import Link from 'next/link'
 import * as React from 'react'
 import Headroom from 'react-headroom'
@@ -19,20 +19,18 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
           id="branding"
         >
           <Link href="/">
-            <a>
-              {logo.url ? (
-                <Image
-                  src={logo.url}
-                  alt={logo.alt || ''}
-                  width={162}
-                  height={60}
-                  priority={true}
-                />
-              ) : (
-                'Jamie Whitmann'
-              )}
-              <span className="sr-only">Return to Homepage</span>
-            </a>
+            {logo.url ? (
+              <Image
+                src={logo.url}
+                alt={logo.alt || ''}
+                width={162}
+                height={60}
+                priority={true}
+              />
+            ) : (
+              'Jamie Whitmann'
+            )}
+            <span className="sr-only">Return to Homepage</span>
           </Link>
         </div>
         <nav>
@@ -42,12 +40,12 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
               navigationlinks.map(link => {
                 return (
                   <li key={link.menuitem.id}>
-                    <PrismicLink
+                    <PrismicNextLink
                       field={link.menuitem}
                       className="hover:bg-accent-focus hover:bg-opacity-50 rounded px-6 py-4"
                     >
                       {link.menuitemtext}
-                    </PrismicLink>
+                    </PrismicNextLink>
                   </li>
                 )
               })}
@@ -60,7 +58,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                 let srmessage = `Visit us on ${socialplatform}`
                 return (
                   <li key={url}>
-                    <PrismicLink
+                    <PrismicNextLink
                       field={link.sociallink}
                       className="hover:bg-accent-focus hover:bg-opacity-50 rounded px-6 py-4"
                     >
@@ -76,7 +74,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                         'Icon Not Found'
                       )}
                       <span className="sr-only">{srmessage}</span>
-                    </PrismicLink>
+                    </PrismicNextLink>
                   </li>
                 )
               })}

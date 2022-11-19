@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
 import { HiMenu } from 'react-icons/hi'
-import { PrismicLink } from '@prismicio/react'
+import PrismicNextLink from '../components/PrismicNextLink'
 const HeadlessMenu = ({ links }) => {
   return (
     <div className="w-56 text-right md:hidden">
@@ -34,9 +34,9 @@ const HeadlessMenu = ({ links }) => {
                       key={link.menuitem.id}
                       className="hover:bg-accent min-h-[45px] flex justify-center items-center"
                     >
-                      <PrismicLink field={link.menuitem}>
+                      <PrismicNextLink field={link.menuitem}>
                         {link.menuitemtext}
-                      </PrismicLink>
+                      </PrismicNextLink>
                     </Menu.Item>
                   )
                 })}

@@ -1,5 +1,6 @@
 import React from 'react'
-import { PrismicRichText, PrismicLink } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
+import PrismicNextLink from '../../components/PrismicNextLink'
 import { PrismicNextImage } from '@prismicio/next'
 
 const SeriesHero = ({ slice }) => {
@@ -28,7 +29,7 @@ const SeriesHero = ({ slice }) => {
       <div className={`flex justify-center flex-wrap space-x-4`}>
         {slice?.items?.map((item, i) => (
           <div key={item.series.id} className="my-4 flex-0">
-            <PrismicLink field={item.series.data.boxsetlink}>
+            <PrismicNextLink field={item.series.data.boxsetlink}>
               <PrismicNextImage
                 field={item.series.data.seriesimage}
                 imgixParams={{ h: 270, w: 270 }}
@@ -36,7 +37,7 @@ const SeriesHero = ({ slice }) => {
               <p className="text-center text-xl md:text-2xl font-abril">
                 {item.series.data.seriesname}
               </p>
-            </PrismicLink>
+            </PrismicNextLink>
           </div>
         ))}
       </div>

@@ -1,8 +1,7 @@
 import React from 'react'
-import { PrismicRichText, PrismicLink } from '@prismicio/react'
+import { PrismicRichText } from '@prismicio/react'
+import PrismicNextLink from '../../components/PrismicNextLink'
 import { PrismicNextImage } from '@prismicio/next'
-import Link from 'next/link'
-// import Image from 'next/future/image'
 
 const HeroWithFigure = ({ slice }) => {
   // define HTML serializer
@@ -62,7 +61,7 @@ const HeroWithFigure = ({ slice }) => {
         }`}
       >
         {herobuttonlink ? (
-          <PrismicLink
+          <PrismicNextLink
             field={herobuttonlink}
             className={`focus:outline-none focus:ring-2 focus:ring-primary focus-visible:ring-4 focus-visible:ring-accent focus-visible:ring-opacity-75 transition duration-300 ease-in-out hover:scale-105 ${
               herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
@@ -71,13 +70,12 @@ const HeroWithFigure = ({ slice }) => {
             <PrismicNextImage
               field={herofigure}
               priority={lcp}
-              width="260"
-              height="400"
-              layout="intrinsic"
+              width={herofigure.dimensions.width}
+              height={herofigure.dimensions.height}
               className="rounded"
             />
             <span className="sr-only">{herofigure.alt}</span>
-          </PrismicLink>
+          </PrismicNextLink>
         ) : (
           <PrismicNextImage
             field={herofigure}
@@ -101,9 +99,9 @@ const HeroWithFigure = ({ slice }) => {
           </h2>
           <PrismicRichText field={herotext} components={components} />
           {herobuttonlink && (
-            <PrismicLink field={herobuttonlink} className="btn btn-accent">
+            <PrismicNextLink field={herobuttonlink} className="btn btn-accent">
               {herobuttontext}
-            </PrismicLink>
+            </PrismicNextLink>
           )}
         </div>
       </div>
