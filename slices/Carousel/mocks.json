@@ -1,0 +1,65 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "carouseltitle": {
+        "__TYPE__": "FieldContent",
+        "value": "sign",
+        "type": "Text"
+      },
+      "carouseldescription": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Laborum id aute ex ad."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "carouselimage",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
+                "width": 3344,
+                "height": 2509
+              },
+              "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?rect=857%2C0%2C1631%2C2509&w=260&h=400",
+              "width": 260,
+              "height": 400,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 857,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "carouselimagelink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

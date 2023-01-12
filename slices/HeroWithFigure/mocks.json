@@ -1,0 +1,239 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "herofigure": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
+          "width": 6597,
+          "height": 4398
+        },
+        "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?rect=1869%2C0%2C2859%2C4398&w=260&h=400",
+        "width": 260,
+        "height": 400,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 1869,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "herofigurelocation": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      },
+      "heroheading": {
+        "__TYPE__": "FieldContent",
+        "value": "Call to Action (Heading)",
+        "type": "Text"
+      },
+      "herotext": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Velit incididunt enim adipisicing anim pariatur officia in exercitation ad laboris pariatur. Sint commodo ex culpa."
+            }
+          },
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ullamco irure quis exercitation deserunt ex qui excepteur cupidatat sit magna magna et nostrud quis. Sint ad ad velit enim enim deserunt sint do laborum. Ullamco veniam deserunt irure voluptate laborum cupidatat."
+            }
+          }
+        ]
+      },
+      "herobuttontext": {
+        "__TYPE__": "FieldContent",
+        "value": "Call to Action Button",
+        "type": "Text"
+      },
+      "herobuttonlink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://neilmastroianni.com"
+        }
+      },
+      "herobackgroundcolor": {
+        "__TYPE__": "FieldContent",
+        "value": "#4888d8",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "heroWithFigureGradient",
+    "primary": {
+      "herofigure": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+          "width": 4272,
+          "height": 2848
+        },
+        "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?rect=1210%2C0%2C1851%2C2848&w=260&h=400",
+        "width": 260,
+        "height": 400,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 1210,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "herofigurelocation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "heroheading": {
+        "__TYPE__": "FieldContent",
+        "value": "Call to Action (Heading)",
+        "type": "Text"
+      },
+      "herotext": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Lorem voluptate ea dolore Lorem nostrud cupidatat in voluptate ut."
+            }
+          }
+        ]
+      },
+      "herobuttontext": {
+        "__TYPE__": "FieldContent",
+        "value": "Call To Action Button Text",
+        "type": "Text"
+      },
+      "herobuttonlink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "herobackgroundcolorstart": {
+        "__TYPE__": "FieldContent",
+        "value": "#d9e3f0",
+        "type": "Color"
+      },
+      "herobackgroundcolorend": {
+        "__TYPE__": "FieldContent",
+        "value": "#2ccce4",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "heroWithBackgroundImage",
+    "primary": {
+      "herofigure": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+          "width": 3024,
+          "height": 3778
+        },
+        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=284%2C0%2C2456%2C3778&w=260&h=400",
+        "width": 260,
+        "height": 400,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 284,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "herofigurelocation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "heroheading": {
+        "__TYPE__": "FieldContent",
+        "value": "Call to Action (Heading)",
+        "type": "Text"
+      },
+      "herotext": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Minim enim pariatur irure officia minim nisi velit cillum mollit exercitation officia amet ullamco occaecat pariatur. Proident enim elit pariatur ut magna. Cillum cillum Lorem ipsum sunt amet cillum Lorem eiusmod cupidatat cupidatat aute ipsum dolor."
+            }
+          }
+        ]
+      },
+      "herobuttontext": {
+        "__TYPE__": "FieldContent",
+        "value": "Call to Action Button",
+        "type": "Text"
+      },
+      "herobuttonlink": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "herobackgroundimage": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a",
+          "width": 3456,
+          "height": 4320
+        },
+        "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?rect=0%2C1188%2C3456%2C1944&w=1920&h=1080",
+        "width": 1920,
+        "height": 1080,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 1188
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

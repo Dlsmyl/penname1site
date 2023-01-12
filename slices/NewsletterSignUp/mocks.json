@@ -1,0 +1,72 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Foreign"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Dolor tempor ex sint ex Lorem reprehenderit Lorem non tempor incididunt cillum. Consequat cupidatat officia excepteur exercitation ex id amet do ex cupidatat nulla deserunt duis aliquip anim. Consectetur duis sunt consequat pariatur."
+            }
+          }
+        ]
+      },
+      "placeholdertext": {
+        "__TYPE__": "FieldContent",
+        "value": "smaller",
+        "type": "Text"
+      },
+      "buttontext": {
+        "__TYPE__": "FieldContent",
+        "value": "possible",
+        "type": "Text"
+      },
+      "formlocation": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "buttoncolor": {
+        "__TYPE__": "FieldContent",
+        "value": "success",
+        "type": "Select"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "mailerlitegroupname",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "since",
+              "type": "Text"
+            }
+          ],
+          [
+            "mailerlitegroupid",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "pain",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

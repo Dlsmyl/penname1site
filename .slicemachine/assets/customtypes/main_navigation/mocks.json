@@ -1,41 +1,78 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "main_navigation",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "logo": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+  "logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+      "width": 3456,
+      "height": 3456
     },
-    "navigationlinks": [
+    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+    "width": 3456,
+    "height": 3456,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "navigationlinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "menuitemtext": "accident",
-        "menuitem": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "menuitemtext",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "said",
+              "type": "Text"
+            }
+          ],
+          [
+            "menuitem",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ]
+        ]
       }
-    ],
-    "sociallinks": [
+    ]
+  },
+  "sociallinks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "sociallink": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        },
-        "socialplatform": "Twitter"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "sociallink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ],
+          [
+            "socialplatform",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Instagram",
+              "type": "Select"
+            }
+          ]
+        ]
       }
     ]
   }

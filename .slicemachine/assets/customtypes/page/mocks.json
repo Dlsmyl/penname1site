@@ -1,27 +1,284 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "page",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "pagetitle": "Page Title Goes Here",
-    "pagemetaimage": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+  "pagetitle": {
+    "__TYPE__": "FieldContent",
+    "value": "Page Title Goes Here",
+    "type": "Text"
+  },
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "should"
+  },
+  "pagemetaimage": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+      "width": 3168,
+      "height": 4752
     },
-    "pagemetadescription": "instead",
-    "slices": []
+    "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+    "width": 3168,
+    "height": 4752,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "pagemetadescription": {
+    "__TYPE__": "FieldContent",
+    "value": "course",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "carousel$586a0be7-6b79-4956-8d48-979815e34d91",
+        "name": "carousel",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "carouseltitle": {
+              "__TYPE__": "FieldContent",
+              "value": "turn",
+              "type": "Text"
+            },
+            "carouseldescription": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Culpa amet duis nostrud eiusmod fugiat Lorem do."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "carouselimage",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+                      "width": 3168,
+                      "height": 4752
+                    },
+                    "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?rect=40%2C0%2C3089%2C4752&w=260&h=400",
+                    "width": 260,
+                    "height": 400,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 40,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "carouselimagelink",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://twitter.com"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "hero_with_figure$c1adce05-d35b-4002-9901-06c1f1282d31",
+        "name": "hero_with_figure",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "herofigure": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+                "width": 3024,
+                "height": 3778
+              },
+              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=284%2C0%2C2456%2C3778&w=260&h=400",
+              "width": 260,
+              "height": 400,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 284,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "herofigurelocation": {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            },
+            "heroheading": {
+              "__TYPE__": "FieldContent",
+              "value": "creature",
+              "type": "Text"
+            },
+            "herotext": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Adipisicing adipisicing consectetur consectetur consequat velit tempor amet pariatur exercitation deserunt nulla minim."
+                  }
+                }
+              ]
+            },
+            "herobuttontext": {
+              "__TYPE__": "FieldContent",
+              "value": "gradually",
+              "type": "Text"
+            },
+            "herobuttonlink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            },
+            "herobackgroundcolor": {
+              "__TYPE__": "FieldContent",
+              "value": "#08c4b5",
+              "type": "Color"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "prose$a7a00cc2-f6ba-4a45-9df1-67c62c39ffbf",
+        "name": "prose",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "prosecontent": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Eiusmod officia cillum aute velit ex ad aliqua non officia enim aute culpa esse ullamco deserunt."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "mailer_lite_sign_up$34a0f553-eba8-4ecf-b4f0-cad951ae08dd",
+        "name": "mailer_lite_sign_up",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Paragraph"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Cillum proident ad Lorem tempor velit laborum dolore elit aliqua enim mollit aliqua ullamco sunt dolor. Minim sint Lorem commodo occaecat ut eu amet fugiat ut velit labore amet elit do officia."
+                  }
+                }
+              ]
+            },
+            "placeholdertext": {
+              "__TYPE__": "FieldContent",
+              "value": "took",
+              "type": "Text"
+            },
+            "buttontext": {
+              "__TYPE__": "FieldContent",
+              "value": "duty",
+              "type": "Text"
+            },
+            "formlocation": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "buttoncolor": {
+              "__TYPE__": "FieldContent",
+              "value": "accent",
+              "type": "Select"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "mailerlitegroupname",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "chamber",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "mailerlitegroupid",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "round",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }

@@ -1,26 +1,340 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "homepage",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "homepagemetadescription": "eventually",
-    "homepagemetaimage": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+  "homepagemetadescription": {
+    "__TYPE__": "FieldContent",
+    "value": "provide",
+    "type": "Text"
+  },
+  "homepagemetaimage": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+      "width": 4380,
+      "height": 2895
     },
-    "slices": []
+    "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+    "width": 4380,
+    "height": 2895,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "hero_with_figure$4047d492-960e-4421-a05e-3335656d4a4e",
+        "name": "hero_with_figure",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "herofigure": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+                "width": 3958,
+                "height": 3958
+              },
+              "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?rect=693%2C0%2C2573%2C3958&w=260&h=400",
+              "width": 260,
+              "height": 400,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 693,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "herofigurelocation": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "heroheading": {
+              "__TYPE__": "FieldContent",
+              "value": "helpful",
+              "type": "Text"
+            },
+            "herotext": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ad et ad mollit deserunt do id laborum dolore occaecat pariatur ea pariatur sunt. Ut dolore dolore consequat nisi deserunt nisi excepteur dolore ex magna. Officia consectetur pariatur pariatur eiusmod eiusmod ex irure aliquip culpa duis excepteur labore et."
+                  }
+                }
+              ]
+            },
+            "herobuttontext": {
+              "__TYPE__": "FieldContent",
+              "value": "race",
+              "type": "Text"
+            },
+            "herobuttonlink": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            },
+            "herobackgroundcolor": {
+              "__TYPE__": "FieldContent",
+              "value": "#da5f50",
+              "type": "Color"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "carousel$3affc72e-3093-4b87-bda6-b49ba2f79fd1",
+        "name": "carousel",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "carouseltitle": {
+              "__TYPE__": "FieldContent",
+              "value": "running",
+              "type": "Text"
+            },
+            "carouseldescription": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ex occaecat enim cillum culpa laborum eiusmod labore quis consectetur velit mollit reprehenderit commodo deserunt. Dolore incididunt cupidatat incididunt dolor enim duis adipisicing anim enim aute. Sunt officia elit amet in."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "carouselimage",
+                  {
+                    "__TYPE__": "ImageContent",
+                    "origin": {
+                      "id": "main",
+                      "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                      "width": 3424,
+                      "height": 3424
+                    },
+                    "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?rect=599%2C0%2C2226%2C3424&w=260&h=400",
+                    "width": 260,
+                    "height": 400,
+                    "edit": {
+                      "zoom": 1,
+                      "crop": {
+                        "x": 599,
+                        "y": 0
+                      },
+                      "background": "transparent"
+                    },
+                    "thumbnails": {}
+                  }
+                ],
+                [
+                  "carouselimagelink",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://twitter.com"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "prose$c3fff9b1-dbab-44f2-b6fd-7891664c9fb5",
+        "name": "prose",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "prosecontent": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Nisi excepteur exercitation id eiusmod commodo deserunt."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "series_hero$452eac68-a9c6-4064-8fd4-fced2a1e6fc2",
+        "name": "series_hero",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Enemy"
+                  }
+                }
+              ]
+            },
+            "subtitle": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Belong"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliquip mollit nostrud pariatur nulla eu duis mollit adipisicing. Tempor ex cupidatat do deserunt. Velit fugiat commodo occaecat minim ad culpa ad quis irure tempor."
+                  }
+                }
+              ]
+            },
+            "backgroundcolor": {
+              "__TYPE__": "FieldContent",
+              "value": "#a0378d",
+              "type": "Color"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "series",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "DocumentLink",
+                      "id": "mock_document_id"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "mailer_lite_sign_up$2ffcd35d-ac0a-4314-8567-8ce6a6d3bad7",
+        "name": "mailer_lite_sign_up",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Growth"
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aliquip non Lorem nulla ipsum et sit occaecat in qui ea dolore pariatur velit irure voluptate. Est sint ut et qui minim adipisicing est."
+                  }
+                }
+              ]
+            },
+            "placeholdertext": {
+              "__TYPE__": "FieldContent",
+              "value": "right",
+              "type": "Text"
+            },
+            "buttontext": {
+              "__TYPE__": "FieldContent",
+              "value": "opinion",
+              "type": "Text"
+            },
+            "formlocation": {
+              "__TYPE__": "BooleanContent",
+              "value": false
+            },
+            "buttoncolor": {
+              "__TYPE__": "FieldContent",
+              "value": "accent",
+              "type": "Select"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "mailerlitegroupname",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "statement",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "mailerlitegroupid",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "goes",
+                    "type": "Text"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }

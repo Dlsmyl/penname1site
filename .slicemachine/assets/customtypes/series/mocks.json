@@ -1,42 +1,58 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "series",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "seriesname": "The Fresh Beginnings Series",
-    "seriesimage": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+  "seriesname": {
+    "__TYPE__": "FieldContent",
+    "value": "The Fresh Beginnings Series",
+    "type": "Text"
+  },
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "stick"
+  },
+  "seriesimage": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+      "width": 3199,
+      "height": 3199
     },
-    "seriesbooks": [
+    "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+    "width": 3199,
+    "height": 3199,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "seriesbooks": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "seriesbook": {
-          "id": "mock_document_id",
-          "link_type": "Document",
-          "type": "book",
-          "tags": [],
-          "lang": "en-us",
-          "slug": null,
-          "first_publication_date": "1970-01-01T00:00:01+0000",
-          "last_publication_date": "1970-01-01T01:00:00+0000"
-        }
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "seriesbook",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
       }
-    ],
-    "boxsetlink": {
-      "link_type": "Web",
+    ]
+  },
+  "boxsetlink": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
       "url": "https://www.amazon.com"
     }
   }
