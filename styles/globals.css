@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 .headroom-wrapper > div {
-  @apply bg-accent shadow-sm;
+  @apply bg-primary shadow-sm;
 }
 .grecaptcha-badge {
   visibility: hidden;

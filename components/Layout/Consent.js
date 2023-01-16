@@ -61,7 +61,7 @@ const Consent = () => {
             closeP()
           }}
         >
-          <HiX className="w-6 h-6" />
+          <HiX className="w-6 h-6 text-base-100" />
           <span className="sr-only">Close</span>
         </button>
         <button

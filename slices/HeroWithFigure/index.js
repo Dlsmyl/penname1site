@@ -99,7 +99,7 @@ const HeroWithFigure = ({ slice }) => {
           </h2>
           <PrismicRichText field={herotext} components={components} />
           {herobuttonlink && (
-            <PrismicNextLink field={herobuttonlink} className="btn btn-accent">
+            <PrismicNextLink field={herobuttonlink} className="btn btn-primary">
               {herobuttontext}
             </PrismicNextLink>
           )}
