@@ -70,9 +70,7 @@ const HeroWithFigure = ({ slice }) => {
             <PrismicNextImage
               field={herofigure}
               priority={lcp}
-              width={herofigure.dimensions.width}
-              height={herofigure.dimensions.height}
-              className="rounded"
+              className="rounded h-[416px]"
             />
             <span className="sr-only">{herofigure.alt}</span>
           </PrismicNextLink>
@@ -80,9 +78,7 @@ const HeroWithFigure = ({ slice }) => {
           <PrismicNextImage
             field={herofigure}
             priority={lcp}
-            width="260"
-            height="400"
-            className={`max-w-sm rounded-lg shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
+            className={`rounded max-w-sm shadow-2xl transition duration-300 ease-in-out hover:scale-105 ${
               herofigurelocation ? `hover:rotate-3` : `hover:-rotate-3`
             }`}
           />

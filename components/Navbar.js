@@ -37,7 +37,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                   <li key={link.menuitem.id}>
                     <PrismicNextLink
                       field={link.menuitem}
-                      className="hover:bg-accent-focus hover:bg-opacity-50 rounded px-6 py-4"
+                      className="hover:bg-primary-focus hover:bg-opacity-50 rounded px-6 py-4"
                     >
                       {link.menuitemtext}
                     </PrismicNextLink>
@@ -55,7 +55,7 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
                   <li key={url}>
                     <PrismicNextLink
                       field={link.sociallink}
-                      className="hover:bg-accent-focus hover:bg-opacity-50 rounded px-6 py-4"
+                      className="hover:bg-primary-focus hover:bg-opacity-50 rounded px-6 py-4"
                     >
                       {socialplatform === 'Facebook' ? (
                         <FaFacebookSquare className="w-6 h-6 text-primary-content inline" />

@@ -149,7 +149,7 @@ const MailerLiteSignUp = ({ slice }) => {
               }`}
               value={buttontext}
             />
-            <p className="prose prose-sm prose-a:text-neutral-content prose-a:no-underline hover:prose-a:underline">
+            <p className="prose prose-sm prose-a:text-primary-content prose-a:no-underline hover:prose-a:underline">
               This site is protected by reCAPTCHA and the{' '}
               <a href="https://policies.google.com/privacy">
                 Google Privacy Policy
