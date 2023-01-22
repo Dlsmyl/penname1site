@@ -72,7 +72,7 @@ const HeroWithFigure = ({ slice }) => {
             <PrismicNextImage
               field={herofigure}
               priority={lcp}
-              className="rounded h-[416px]"
+              className="rounded"
             />
             <span className="sr-only">{herofigure.alt}</span>
           </PrismicNextLink>

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { PrismicImage } from '@prismicio/react'
+import { PrismicNextImage } from '@prismicio/next'
 import PrismicNextLink from './PrismicNextLink'
 import Link from 'next/link'
 import * as React from 'react'
@@ -21,7 +21,12 @@ const Navbar = ({ logo, navigationlinks, sociallinks }) => {
         >
           <Link href="/">
             {logo.url ? (
-              <PrismicImage field={logo} className="w-20 h-20" />
+              <PrismicNextImage
+                field={logo}
+                imgixParams={{ maxW: 100, maxH: 100, h: 100 }}
+                width={100}
+                height={100}
+              />
             ) : (
               'Jamie Whitmann'
             )}
