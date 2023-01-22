@@ -2,12 +2,14 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import PrismicNextLink from '../../components/PrismicNextLink'
 import { PrismicNextImage } from '@prismicio/next'
+import { Abril_Fatface } from '@next/font/google'
+const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const SeriesHero = ({ slice }) => {
   const components = {
     heading2: ({ node, children }) => (
       <h2
-        className={`my-4 text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-abril`}
+        className={`my-4 text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl ${abril.className}`}
       >
         {children}
       </h2>
@@ -34,7 +36,9 @@ const SeriesHero = ({ slice }) => {
                 field={item.series.data.seriesimage}
                 imgixParams={{ h: 270, w: 270 }}
               />
-              <p className="text-center text-xl md:text-2xl font-abril">
+              <p
+                className={`text-center text-xl md:text-2xl ${abril.className}`}
+              >
                 {item.series.data.seriesname}
               </p>
             </PrismicNextLink>

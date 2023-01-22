@@ -2,6 +2,8 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
+import { Abril_Fatface } from '@next/font/google'
+const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const MailerLiteSignUp = ({ slice }) => {
   const [isDisabled, setIsDisabled] = React.useState(false)
@@ -108,7 +110,11 @@ const MailerLiteSignUp = ({ slice }) => {
   }
   const components = {
     heading2: ({ node, children }) => {
-      return <h2 className="font-abril text-center md:text-left">{children}</h2>
+      return (
+        <h2 className={`text-center md:text-left ${abril.className}`}>
+          {children}
+        </h2>
+      )
     },
     paragraph: ({ node, children }) => {
       return <p className="text-left">{children}</p>
@@ -122,7 +128,7 @@ const MailerLiteSignUp = ({ slice }) => {
       </div>
       {success === null && (
         <form
-          className="flex flex-col gap-y-4"
+          className="flex flex-col gap-y-4 place-self-center my-6"
           onSubmit={handleSubmit(addSubscriber)}
         >
           <label htmlFor={`email_${id}`}>

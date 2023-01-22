@@ -2,6 +2,8 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import PrismicNextLink from '../../components/PrismicNextLink'
 import { PrismicNextImage } from '@prismicio/next'
+import { Abril_Fatface } from '@next/font/google'
+const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const HeroWithFigure = ({ slice }) => {
   // define HTML serializer
@@ -85,7 +87,9 @@ const HeroWithFigure = ({ slice }) => {
         )}
         <div className="text-center md:text-left max-w-screen-sm mx-auto">
           <h2
-            className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-abril ${
+            className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold ${
+              abril.className
+            } ${
               variation === 'heroWithBackgroundImage'
                 ? ` text-secondary-focus`
                 : ``

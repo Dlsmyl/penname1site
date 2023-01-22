@@ -6,6 +6,8 @@ import { useRouter } from 'next/router'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 import Layout from '../components/Layout/Layout'
+import { Abril_Fatface } from '@next/font/google'
+const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const Page = ({ page, navigation, settings }) => {
   const router = useRouter()
@@ -81,7 +83,9 @@ const Page = ({ page, navigation, settings }) => {
           />
         )}
       </Head>
-      <h1 className="mx-auto px-4 md:px-0 font-abril text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 md:my-6 lg:my-8 xl:my-10 text-center">
+      <h1
+        className={`mx-auto px-4 md:px-0 text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 md:my-6 lg:my-8 xl:my-10 text-center ${abril.className}`}
+      >
         {page.data.pagetitle}
       </h1>
       <div className="min-h-[3px] rounded bg-gradient-to-r from-transparent via-primary to-transparent mb-2 md:mb-4 lg:mb-6 xl:mb-8" />
