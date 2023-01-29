@@ -47,13 +47,15 @@ const Consent = () => {
         consent ? 'hidden' : ''
       }`}
     >
-      <p className="prose prose-sm mx-auto md:col-span-3 px-6 text-left my-4">
-        I respect your right to privacy. Period. If you wish to allow cookies, I
-        will get to learn a few things like what pages my readers visit, what
-        country they are from, how long they stay, etc. Please choose your
-        preference below. Data are only collected if you accept (which is how it
-        should be).
-      </p>
+      <div className="prose prose-sm mx-auto md:col-span-3 prose-p:text-white">
+        <p className="px-6 text-left my-4">
+          I respect your right to privacy. Period. If you wish to allow cookies,
+          I will get to learn a few things like what pages my readers visit,
+          what country they are from, how long they stay, etc. Please choose
+          your preference below. Data are only collected if you accept (which is
+          how it should be).
+        </p>
+      </div>
       <div className="flex md:col-span-2 items-center justify-evenly my-4">
         <button
           className="absolute top-2 right-2"
