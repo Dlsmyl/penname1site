@@ -17,8 +17,9 @@ const MailerLiteSignUp = ({ slice }) => {
 
   const submitData = async (formData, token) => {
     setIsDisabled(true)
+    const formKeys = Object.keys(formData)
+    const email = formData[formKeys[0]]
     try {
-      const { email } = formData
       const groupIds = slice.items.map(item => item.mailerlitegroupid)
       await axios({
         url: '/api/newsletter',

@@ -52,7 +52,6 @@ const recaptchaValidation = async token => {
           response: token,
         },
       })
-      console.log('RESPONSE ******************** ', response)
       return { successful: true, message: response.data.score }
     } catch (error) {
       let message
