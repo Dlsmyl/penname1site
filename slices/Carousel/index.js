@@ -1,10 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
 import PrismicNextLink from '../../components/PrismicNextLink'
+import { Abril_Fatface } from 'next/font/google'
+import { PrismicRichText } from '@prismicio/react'
+const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const Carousel = ({ slice }) => {
   return (
     <section className="py-4 md:py-6 lg:py-8 xl:py-10">
+      {slice.primary.carouseltitle && (
+        <h2
+          className={`text-center text-3xl md:text-4xl lg:text-5xl my-4 md:my-6 lg:my-8 xl:my-10 ${abril.className}`}
+        >
+          {slice.primary.carouseltitle}
+        </h2>
+      )}
+      {slice.primary.carouseldescription && (
+        <div className="prose md:prose-lg mx-auto text-center my-4 md:my-6">
+          <PrismicRichText field={slice.primary.carouseldescription} />
+        </div>
+      )}
       <div className="carousel w-[260px]  space-x-4 mx-auto shadow-lg">
         {slice?.items?.map((item, i) => {
           return (

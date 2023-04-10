@@ -5,8 +5,8 @@
     "primary": {
       "carouseltitle": {
         "__TYPE__": "FieldContent",
-        "value": "sign",
-        "type": "Text"
+        "type": "Text",
+        "value": "Jamie Whitmann's Carousel"
       },
       "carouseldescription": {
         "__TYPE__": "StructuredTextContent",
@@ -14,8 +14,10 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Laborum id aute ex ad."
-            }
+              "text": "Jamie Whitmann's description of the carousel",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       }
@@ -27,24 +29,26 @@
           [
             "carouselimage",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
-                "id": "main",
-                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0",
-                "width": 3344,
-                "height": 2509
+                "id": "KYpbWtY7DJM",
+                "url": "https://images.unsplash.com/photo-1571840070800-6ffc6d2e5676?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y293Z2lybHxlbnwwfHx8fDE2ODExMjA4ODk&ixlib=rb-4.0.3&q=85",
+                "width": 3648,
+                "height": 5472
               },
-              "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?rect=857%2C0%2C1631%2C2509&w=260&h=400",
+              "url": "https://images.unsplash.com/photo-1571840070800-6ffc6d2e5676?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y293Z2lybHxlbnwwfHx8fDE2ODExMjA4ODk&ixlib=rb-4.0.3&q=85&rect=46%2C0%2C3557%2C5472&w=260&h=400",
               "width": 260,
               "height": 400,
               "edit": {
+                "background": "transparent",
                 "zoom": 1,
                 "crop": {
-                  "x": 857,
+                  "x": 46,
                   "y": 0
-                },
-                "background": "transparent"
+                }
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],
@@ -56,6 +60,37 @@
                 "__TYPE__": "ExternalLink",
                 "url": "https://prismic.io"
               }
+            }
+          ]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "carouselimage",
+            {
+              "url": "https://images.unsplash.com/photo-1619368562181-1e4b3dc70570?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8Y293Ym95fGVufDB8fHx8MTY4MTEyMDg2OQ&ixlib=rb-4.0.3&q=85&rect=223%2C0%2C2304%2C3545&w=260&h=400",
+              "origin": {
+                "id": "XbmRELwxS_Q",
+                "url": "https://images.unsplash.com/photo-1619368562181-1e4b3dc70570?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8Y293Ym95fGVufDB8fHx8MTY4MTEyMDg2OQ&ixlib=rb-4.0.3&q=85",
+                "width": 2750,
+                "height": 3545
+              },
+              "width": 260,
+              "height": 400,
+              "edit": {
+                "background": "transparent",
+                "zoom": 1,
+                "crop": {
+                  "x": 223,
+                  "y": 0
+                }
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
             }
           ]
         ]

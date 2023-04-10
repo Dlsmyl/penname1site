@@ -2,7 +2,7 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import PrismicNextLink from '../../components/PrismicNextLink'
 import { PrismicNextImage } from '@prismicio/next'
-import { Abril_Fatface } from '@next/font/google'
+import { Abril_Fatface } from "next/font/google"
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const SeriesHero = ({ slice }) => {

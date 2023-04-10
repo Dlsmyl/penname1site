@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 import Layout from '../components/Layout/Layout'
-import { Abril_Fatface } from '@next/font/google'
+import { Abril_Fatface } from "next/font/google"
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const Page = ({ page, navigation, settings }) => {

@@ -1,5 +1,5 @@
 import { PrismicRichText } from '@prismicio/react'
-import { Abril_Fatface } from '@next/font/google'
+import { Abril_Fatface } from "next/font/google"
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 const Prose = ({ slice }) => {
   const components = {
