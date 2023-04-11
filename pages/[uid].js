@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 import Layout from '../components/Layout/Layout'
-import { Abril_Fatface } from "next/font/google"
+import { Abril_Fatface } from 'next/font/google'
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const Page = ({ page, navigation, settings }) => {
@@ -113,6 +113,6 @@ export async function getStaticPaths() {
   const pages = await client.getAllByType('page')
   return {
     paths: pages.map(page => prismicH.asLink(page)),
-    fallback: false,
+    fallback: 'blocking', // remove when Netlify's NextJS Runtime is fixed
   }
 }

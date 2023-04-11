@@ -58,7 +58,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
+                "url": "https://www.jamiewhitmann.com"
               }
             }
           ]
@@ -91,6 +91,16 @@
               "alt": null,
               "__TYPE__": "ImageContent",
               "thumbnails": {}
+            }
+          ],
+          [
+            "carouselimagelink",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://www.jamiewhitmann.com"
+              }
             }
           ]
         ]
