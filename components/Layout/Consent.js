@@ -8,7 +8,9 @@ const Consent = () => {
     setConsent(hasCookie(`localConsent`))
     setTimeout(() => {
       let banner = document.querySelector('#consent-banner')
-      banner.classList.add('opacity-100')
+      if (banner) {
+        banner.classList.add('opacity-100')
+      }
     }, 3500)
   }, [])
 
