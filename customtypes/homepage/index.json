@@ -3,14 +3,12 @@
   "label": "Homepage",
   "repeatable": false,
   "status": true,
+  "format": "page",
   "json": {
     "Main": {
       "homepagemetadescription": {
         "type": "Text",
-        "config": {
-          "label": "Homepage Meta Description",
-          "placeholder": ""
-        }
+        "config": { "label": "Homepage Meta Description", "placeholder": "" }
       },
       "homepagemetaimage": {
         "type": "Image",
@@ -25,21 +23,11 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "hero_with_figure": {
-              "type": "SharedSlice"
-            },
-            "carousel": {
-              "type": "SharedSlice"
-            },
-            "prose": {
-              "type": "SharedSlice"
-            },
-            "series_hero": {
-              "type": "SharedSlice"
-            },
-            "mailer_lite_sign_up": {
-              "type": "SharedSlice"
-            }
+            "hero_with_figure": { "type": "SharedSlice" },
+            "carousel": { "type": "SharedSlice" },
+            "prose": { "type": "SharedSlice" },
+            "series_hero": { "type": "SharedSlice" },
+            "mailer_lite_sign_up": { "type": "SharedSlice" }
           }
         }
       }
