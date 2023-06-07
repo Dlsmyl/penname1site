@@ -2,12 +2,52 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
-import { Abril_Fatface } from "next/font/google"
+import { Abril_Fatface } from 'next/font/google'
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const MailerLiteSignUp = ({ slice }) => {
   const [isDisabled, setIsDisabled] = React.useState(false)
   const [success, setSuccess] = React.useState(null)
+  const [formInteraction, setFormInteraction] = React.useState(false)
+
+  const handleFocus = () => {
+    !formInteraction && setFormInteraction(true)
+  }
+
+  React.useEffect(() => {
+    if (formInteraction) {
+      const recaptchaScript = document.createElement('script')
+      recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=6LdegF8iAAAAADDOMwVAXSvPRZwr2GC_O_5cxNgs`
+      recaptchaScript.async = true
+      recaptchaScript.defer = true
+      document.head.appendChild(recaptchaScript)
+      return () => {
+        // Get all script tags: returns HTMLcollection
+        const scripts = document.getElementsByTagName('script')
+        // Loop through the HTMLcollection (array-like but not array)
+        for (var i = 0; i < scripts.length; i++) {
+          // find script whose src value includes "recaptcha/releases"
+          // this script is added when main recaptcha script is loaded
+
+          if (
+            scripts.item(i).attributes.getNamedItem('src') &&
+            scripts
+              .item(i)
+              .attributes.getNamedItem('src')
+              .value.includes('recaptcha/releases')
+          ) {
+            document.head.removeChild(scripts.item(i)) // remove script from head
+          }
+        }
+        document.head.removeChild(recaptchaScript) // remove main recaptcha script from head
+        // remove the recaptcha badge from the bottom right corner
+        let badge = document.querySelector('.grecaptcha-badge')
+        if (badge) {
+          badge.parentElement.remove()
+        }
+      }
+    }
+  }, [formInteraction])
   const {
     register,
     handleSubmit,
@@ -142,6 +182,7 @@ const MailerLiteSignUp = ({ slice }) => {
                 required: 'Your email address is required.',
               })}
               className={`what input input-bordered input-primary w-full max-w-s self-end`}
+              onFocus={handleFocus}
             />
           </label>
 
@@ -155,6 +196,7 @@ const MailerLiteSignUp = ({ slice }) => {
                 isDisabled ? `btn-disabled` : ``
               }`}
               value={buttontext}
+              onFocus={handleFocus}
             />
             <p className="prose prose-sm prose-a:text-primary-content prose-a:no-underline hover:prose-a:underline">
               This site is protected by reCAPTCHA and the{' '}

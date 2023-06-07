@@ -5,6 +5,6 @@
 .headroom-wrapper > div {
   @apply bg-primary shadow-sm;
 }
-.grecaptcha-badge {
+/* .grecaptcha-badge {
   visibility: hidden;
-}
+} */

@@ -11,42 +11,6 @@ const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const Page = ({ page, navigation, settings }) => {
   const router = useRouter()
-  let sliceTypes = []
-  page.data.slices.forEach(slice => sliceTypes.push(slice.slice_type))
-  const formOnPage = sliceTypes.indexOf('mailer_lite_sign_up') > 0
-  React.useEffect(() => {
-    if (formOnPage) {
-      const recaptchaScript = document.createElement('script')
-      recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=6LdegF8iAAAAADDOMwVAXSvPRZwr2GC_O_5cxNgs`
-      recaptchaScript.async = true
-      document.head.appendChild(recaptchaScript)
-      return () => {
-        // Get all script tags: returns HTMLcollection
-        const scripts = document.getElementsByTagName('script')
-        // Loop through the HTMLcollection (array-like but not array)
-        for (var i = 0; i < scripts.length; i++) {
-          // find script whose src value includes "recaptcha/releases"
-          // this script is added when main recaptcha script is loaded
-
-          if (
-            scripts.item(i).attributes.getNamedItem('src') &&
-            scripts
-              .item(i)
-              .attributes.getNamedItem('src')
-              .value.includes('recaptcha/releases')
-          ) {
-            document.head.removeChild(scripts.item(i)) // remove script from head
-          }
-        }
-        document.head.removeChild(recaptchaScript) // remove main recaptcha script from head
-        // remove the recaptcha badge from the bottom right corner
-        let badge = document.querySelector('.grecaptcha-badge')
-        if (badge) {
-          badge.parentElement.remove()
-        }
-      }
-    }
-  }, [formOnPage])
 
   return (
     <Layout {...navigation}>
