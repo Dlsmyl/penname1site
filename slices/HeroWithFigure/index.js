@@ -2,7 +2,7 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import PrismicNextLink from '../../components/PrismicNextLink'
 import { PrismicNextImage } from '@prismicio/next'
-import { Abril_Fatface } from "next/font/google"
+import { Abril_Fatface } from 'next/font/google'
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const HeroWithFigure = ({ slice }) => {
@@ -55,7 +55,7 @@ const HeroWithFigure = ({ slice }) => {
   return (
     <section className={`hero relative md:min-h-[600px]`} style={bgStyle}>
       {variation === 'heroWithBackgroundImage' ? (
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-90"></div>
+        <div className="absolute inset-0 bg-accent bg-opacity-90"></div>
       ) : null}
       <div
         className={`hero-content flex-col lg:space-x-8 ${

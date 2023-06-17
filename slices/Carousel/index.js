@@ -20,25 +20,27 @@ const Carousel = ({ slice }) => {
           <PrismicRichText field={slice.primary.carouseldescription} />
         </div>
       )}
-      <div className="carousel w-[260px]  space-x-4 mx-auto shadow-lg">
-        {slice?.items?.map((item, i) => {
-          return (
-            <div
-              id={`item${i}`}
-              key={slice.id + i}
-              className="carousel-item w-full"
-            >
-              <PrismicNextLink field={item.carouselimagelink}>
-                <Image
-                  src={item.carouselimage.url}
-                  alt={item.carouselimage.alt || ''}
-                  width={260}
-                  height={400}
-                />
-              </PrismicNextLink>
-            </div>
-          )
-        })}
+      <div className="flex justify-center items-center">
+        <div className="carousel w-[260px]">
+          {slice?.items?.map((item, i) => {
+            return (
+              <div
+                id={`item${i}`}
+                key={slice.id + i}
+                className="carousel-item w-full"
+              >
+                <PrismicNextLink field={item.carouselimagelink}>
+                  <Image
+                    src={item.carouselimage.url}
+                    alt={item.carouselimage.alt || ''}
+                    width={260}
+                    height={400}
+                  />
+                </PrismicNextLink>
+              </div>
+            )
+          })}
+        </div>
       </div>
       <div className="mt-4 flex justify-center w-full py-2 gap-4">
         {slice?.items?.map((item, i) => {

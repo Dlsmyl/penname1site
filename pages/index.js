@@ -3,7 +3,7 @@ import { SliceZone } from '@prismicio/react'
 import Head from 'next/head'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layout'
 export default function Home({ page, navigation, settings }) {
   return (
     <Layout {...navigation}>

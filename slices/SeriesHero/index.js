@@ -1,11 +1,12 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import PrismicNextLink from '../../components/PrismicNextLink'
+import { PrismicNextLink } from '@prismicio/next'
 import { PrismicNextImage } from '@prismicio/next'
-import { Abril_Fatface } from "next/font/google"
+import { Abril_Fatface } from 'next/font/google'
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const SeriesHero = ({ slice }) => {
+  console.log('/slices/SeriesHero -> ', slice)
   const components = {
     heading2: ({ node, children }) => (
       <h2
@@ -27,19 +28,20 @@ const SeriesHero = ({ slice }) => {
     <section className="w-full mx-auto">
       <PrismicRichText field={slice.primary.title} components={components} />
       <PrismicRichText field={slice.primary.subtitle} components={components} />
-      <hr />
+
       <div className={`flex justify-center flex-wrap space-x-4`}>
         {slice?.items?.map((item, i) => (
           <div key={item.series.id} className="my-4 flex-0">
-            <PrismicNextLink field={item.series.data.boxsetlink}>
+            <PrismicNextLink field={item?.series?.data?.boxsetlink}>
               <PrismicNextImage
-                field={item.series.data.seriesimage}
+                field={item?.series?.data?.seriesimage}
                 imgixParams={{ h: 270, w: 270 }}
+                className={`w-[270px]`}
               />
               <p
                 className={`text-center text-xl md:text-2xl ${abril.className}`}
               >
-                {item.series.data.seriesname}
+                {item?.series?.data?.seriesname}
               </p>
             </PrismicNextLink>
           </div>

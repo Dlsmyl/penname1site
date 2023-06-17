@@ -3,19 +3,159 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Script from 'next/script'
 import { PrismicProvider } from '@prismicio/react'
-import { PrismicPreview } from '@prismicio/next'
+import {
+  PrismicPreview,
+  PrismicNextImage,
+  PrismicNextLink,
+} from '@prismicio/next'
 import { repositoryName } from '../prismicio'
 import { getCookie } from 'cookies-next'
 
 export default function App({ Component, pageProps }) {
   const consent = getCookie(`localConsent`)
+  const richTextComponents = {
+    // see global.js temporarily to modify these styles. Working on DRY.
+
+    heading1: ({ children, node }) => (
+      <h1
+        className={`${roboto.className} ${
+          node?.spans[0]?.data?.label === 'color-secondary'
+            ? `text-brand-secondary`
+            : ``
+        }`}
+      >
+        {children}
+      </h1>
+    ),
+    heading2: ({ children, node }) => {
+      return (
+        <h2
+          className={`${roboto.className} ${
+            node?.spans[0]?.data?.label === 'color-secondary'
+              ? `text-brand-secondary`
+              : ``
+          }`}
+        >
+          {children}
+        </h2>
+      )
+    },
+    heading3: ({ children, node }) => (
+      <h3
+        className={`${roboto.className} ${
+          node?.spans[0]?.data?.label === 'color-secondary'
+            ? `text-brand-secondary`
+            : ``
+        }`}
+      >
+        {children}
+      </h3>
+    ),
+    heading4: ({ children, node }) => (
+      <h4
+        className={`${roboto.className} ${
+          node?.spans[0]?.data?.label === 'color-secondary'
+            ? `text-brand-secondary`
+            : ``
+        }`}
+      >
+        {children}
+      </h4>
+    ),
+    heading5: ({ children, node }) => (
+      <h5
+        className={`${roboto.className} ${
+          node?.spans[0]?.data?.label === 'color-secondary'
+            ? `text-brand-secondary`
+            : ``
+        }`}
+      >
+        {children}
+      </h5>
+    ),
+    heading6: ({ children, node }) => (
+      <h6
+        className={`${roboto.className} ${
+          node?.spans[0]?.data?.label === 'color-secondary'
+            ? `text-brand-secondary`
+            : ``
+        }`}
+      >
+        {children}
+      </h6>
+    ),
+    paragraph: ({ children }) => <p>{children}</p>,
+    oList: ({ children }) => (
+      <ol className="commonTextMargins commonTextStyles listStyles">
+        {children}
+      </ol>
+    ),
+    oListItem: ({ children }) => (
+      <li className="commonTextMargins commonTextStyles listItemStyles">
+        {children}
+      </li>
+    ),
+    list: ({ children }) => (
+      <ul className="commonTextMargins commonTextStyles listStyles">
+        {children}
+      </ul>
+    ),
+    listItem: ({ children }) => (
+      <li className="commonTextMargins commonTextStyles listItemStyles">
+        {children}
+      </li>
+    ),
+    preformatted: ({ children }) => (
+      <pre className="commonTextMargins preFormattedStyles">
+        <code>{children}</code>
+      </pre>
+    ),
+    strong: ({ children }) => (
+      <strong className="font-semibold">{children}</strong>
+    ),
+    hyperlink: ({ children, node }) => (
+      <PrismicNextLink field={node.data} className="linkStyles">
+        {children}
+      </PrismicNextLink>
+    ),
+    embed: ({ node, children }) => {
+      return (
+        <div className="mx-auto max-w-screen-sm overflow-hidden rounded shadow-xl">
+          <div
+            className="aspect-h-9 aspect-w-16"
+            dangerouslySetInnerHTML={{ __html: node.oembed.html }}
+          />
+        </div>
+      )
+    },
+    image: ({ node }) => {
+      return (
+        <div className="not-prose my-4 flex justify-center">
+          {node?.linkTo?.link_type === undefined ? (
+            <a href={node.url} target="_blank" rel="noreferrer">
+              <PrismicNextImage
+                field={node}
+                className="rounded-lg transition duration-300 ease-in-out hover:shadow hover:shadow-brand-accent"
+              />
+            </a>
+          ) : (
+            <div className="not-prose my-4 flex justify-center">
+              <PrismicNextLink field={node?.linkTo} rel="noreferrer">
+                <PrismicNextImage
+                  field={node}
+                  className="rounded-lg transition duration-300 ease-in-out hover:shadow hover:shadow-brand-accent"
+                />
+              </PrismicNextLink>
+            </div>
+          )}
+        </div>
+      )
+    },
+  }
   return (
     <PrismicProvider
-      internalLinkComponent={({ href, ...props }) => (
-        <Link href={href}>
-          <a {...props} />
-        </Link>
-      )}
+      internalLinkComponent={props => <Link {...props} />}
+      richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>
         <Head>
