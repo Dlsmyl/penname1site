@@ -3,12 +3,53 @@ import { SliceZone, PrismicRichText } from '@prismicio/react'
 import { createClient } from '@/prismicio'
 import { components } from '@/slices'
 import Layout from '@/components/Layout'
-import { asLink } from '@prismicio/client'
+import { asLink, asText } from '@prismicio/client'
 
 const Post = ({ post, navigation }) => {
-  console.log('/pages/blog/[uid].js -> ', post)
   return (
     <Layout {...navigation}>
+      <Head>
+        <title>{`${asText(post?.data?.title)} • JamieWhitmann.com`}</title>
+        <link
+          rel="canonical"
+          href={`https://www.jamiewhitmann.com${post?.url}`}
+        />
+        <>
+          <meta
+            name="description"
+            content={
+              post.metadescription ||
+              `Check out the most recent posts from Jamie's Blog`
+            }
+          />
+          <meta
+            property="og:description"
+            content={
+              post.metadescription ||
+              `Check out the most recent posts from Jamie's Blog`
+            }
+          />
+        </>
+
+        <meta
+          property="og:url"
+          content={`https://www.jamiewhitmann.com${post?.url}`}
+        />
+        <meta property="og:type" content="website" />
+        {post?.data?.metaimage && (
+          <meta property="og:image" content={post?.data?.metaimage?.url} />
+        )}
+        {post?.data?.metatitle && (
+          <meta property="og:title" content={post?.data?.metatitle} />
+        )}
+
+        <meta property="twitter:card" content="summary_large_image" />
+
+        {post?.data?.metaimage && (
+          <meta property="twitter:image" content={post?.data?.metaimage?.url} />
+        )}
+      </Head>
+      <PrismicRichText field={post?.data?.title} />
       {post.data?.slices?.length > 0 && (
         <SliceZone slices={post.data.slices} components={components} />
       )}
@@ -22,6 +63,10 @@ export async function getStaticProps({ params, previewData }) {
   const post = await client.getByUID('post', params.uid, {
     graphQuery: `{
       post {
+        title
+        metaimage
+        metadescription
+        metatitle
         slices {
           ...on series_hero {
             variation {

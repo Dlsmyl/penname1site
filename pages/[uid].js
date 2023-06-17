@@ -48,7 +48,7 @@ const Page = ({ navigation, page, posts, settings }) => {
           )}
         </Head>
         <h1
-          className={`mx-auto px-4 md:px-0 text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 md:my-6 lg:my-8 xl:my-10 text-center ${abril.className}`}
+          className={`mx-auto px-4 md:px-0 text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 md:my-6 lg:my-8 xl:my-12 text-center ${abril.className}`}
         >
           {page.data.pagetitle}
         </h1>
@@ -92,9 +92,11 @@ const Page = ({ navigation, page, posts, settings }) => {
         )}
       </Head>
       <div>
-        <h2 className="mx-auto my-8 max-w-md text-center text-3xl md:text-4xl lg:text-5xl">
-          Blog
-        </h2>
+        <h1
+          className={`mx-auto my-4 md:my-6 lg:my-8 xl:my-12 py-8 max-w-md text-center text-3xl md:text-4xl lg:text-5xl ${abril.className}`}
+        >
+          {page?.data?.pagetitle}
+        </h1>
         <hr className="border" />
         {posts.total_pages > 1 ? <Pagination {...posts} /> : null}
         {posts.results.length ? (

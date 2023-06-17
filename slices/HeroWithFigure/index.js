@@ -55,7 +55,7 @@ const HeroWithFigure = ({ slice }) => {
   return (
     <section className={`hero relative md:min-h-[600px]`} style={bgStyle}>
       {variation === 'heroWithBackgroundImage' ? (
-        <div className="absolute inset-0 bg-accent bg-opacity-90"></div>
+        <div className="absolute inset-0 bg-secondary bg-opacity-90"></div>
       ) : null}
       <div
         className={`hero-content flex-col lg:space-x-8 ${
@@ -89,16 +89,12 @@ const HeroWithFigure = ({ slice }) => {
           <h2
             className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold ${
               abril.className
-            } ${
-              variation === 'heroWithBackgroundImage'
-                ? ` text-secondary-focus`
-                : ``
-            }`}
+            } ${variation === 'heroWithBackgroundImage' ? ` text-accent` : ``}`}
           >
             {heroheading}
           </h2>
           <PrismicRichText field={herotext} components={components} />
-          {herobuttonlink && (
+          {herobuttonlink.url && (
             <PrismicNextLink field={herobuttonlink} className="btn btn-primary">
               {herobuttontext}
             </PrismicNextLink>

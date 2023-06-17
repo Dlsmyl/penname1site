@@ -10,6 +10,8 @@ import {
 } from '@prismicio/next'
 import { repositoryName } from '../prismicio'
 import { getCookie } from 'cookies-next'
+import { Abril_Fatface } from 'next/font/google'
+const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 export default function App({ Component, pageProps }) {
   const consent = getCookie(`localConsent`)
@@ -18,7 +20,9 @@ export default function App({ Component, pageProps }) {
 
     heading1: ({ children, node }) => (
       <h1
-        className={`${roboto.className} ${
+        className={`text-3xl md:text-4xl lg:text-5xl my-4 md:my-6 lg:my-8 xl:my-12 text-center py-8 ${
+          abril.className
+        } ${
           node?.spans[0]?.data?.label === 'color-secondary'
             ? `text-brand-secondary`
             : ``
@@ -30,7 +34,7 @@ export default function App({ Component, pageProps }) {
     heading2: ({ children, node }) => {
       return (
         <h2
-          className={`${roboto.className} ${
+          className={`${abril.className} ${
             node?.spans[0]?.data?.label === 'color-secondary'
               ? `text-brand-secondary`
               : ``
@@ -42,7 +46,7 @@ export default function App({ Component, pageProps }) {
     },
     heading3: ({ children, node }) => (
       <h3
-        className={`${roboto.className} ${
+        className={`${abril.className} ${
           node?.spans[0]?.data?.label === 'color-secondary'
             ? `text-brand-secondary`
             : ``
@@ -53,7 +57,7 @@ export default function App({ Component, pageProps }) {
     ),
     heading4: ({ children, node }) => (
       <h4
-        className={`${roboto.className} ${
+        className={`${abril.className} ${
           node?.spans[0]?.data?.label === 'color-secondary'
             ? `text-brand-secondary`
             : ``
@@ -64,7 +68,7 @@ export default function App({ Component, pageProps }) {
     ),
     heading5: ({ children, node }) => (
       <h5
-        className={`${roboto.className} ${
+        className={`${abril.className} ${
           node?.spans[0]?.data?.label === 'color-secondary'
             ? `text-brand-secondary`
             : ``
@@ -75,7 +79,7 @@ export default function App({ Component, pageProps }) {
     ),
     heading6: ({ children, node }) => (
       <h6
-        className={`${roboto.className} ${
+        className={`${abril.className} ${
           node?.spans[0]?.data?.label === 'color-secondary'
             ? `text-brand-secondary`
             : ``

@@ -6,7 +6,6 @@ import { Abril_Fatface } from 'next/font/google'
 const abril = Abril_Fatface({ weight: '400', subsets: ['latin'] })
 
 const SeriesHero = ({ slice }) => {
-  console.log('/slices/SeriesHero -> ', slice)
   const components = {
     heading2: ({ node, children }) => (
       <h2
