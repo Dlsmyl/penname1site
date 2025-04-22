@@ -8,7 +8,10 @@
     "Main": {
       "homepagemetadescription": {
         "type": "Text",
-        "config": { "label": "Homepage Meta Description", "placeholder": "" }
+        "config": {
+          "label": "Homepage Meta Description",
+          "placeholder": ""
+        }
       },
       "homepagemetaimage": {
         "type": "Image",
@@ -23,12 +26,46 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "hero_with_figure": { "type": "SharedSlice" },
-            "carousel": { "type": "SharedSlice" },
-            "prose": { "type": "SharedSlice" },
-            "series_hero": { "type": "SharedSlice" },
-            "mailer_lite_sign_up": { "type": "SharedSlice" }
+            "series_hero": {
+              "type": "SharedSlice"
+            },
+            "carousel": {
+              "type": "SharedSlice"
+            },
+            "prose": {
+              "type": "SharedSlice"
+            },
+            "mailer_lite_sign_up": {
+              "type": "SharedSlice"
+            },
+            "hero_with_figure": {
+              "type": "SharedSlice"
+            }
           }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "label": "Meta Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
         }
       }
     }

@@ -40,10 +40,7 @@
         },
         "backgroundcolor": {
           "type": "Color",
-          "config": {
-            "label": "Background Color",
-            "placeholder": ""
-          }
+          "config": { "label": "Background Color", "placeholder": "" }
         }
       },
       "items": {
@@ -52,9 +49,7 @@
           "config": {
             "label": "Series",
             "select": "document",
-            "customtypes": [
-              "series"
-            ]
+            "customtypes": ["series"]
           }
         }
       },

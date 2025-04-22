@@ -5,25 +5,11 @@
     "primary": {
       "title": {
         "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading2",
-            "content": {
-              "text": "Sudden"
-            }
-          }
-        ]
+        "value": [{ "type": "heading2", "content": { "text": "Sudden" } }]
       },
       "subtitle": {
         "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading3",
-            "content": {
-              "text": "Necessary"
-            }
-          }
-        ]
+        "value": [{ "type": "heading3", "content": { "text": "Necessary" } }]
       },
       "description": {
         "__TYPE__": "StructuredTextContent",
@@ -50,10 +36,7 @@
             "series",
             {
               "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "DocumentLink",
-                "id": "mock_document_id"
-              }
+              "value": { "__TYPE__": "DocumentLink", "id": "mock_document_id" }
             }
           ]
         ]

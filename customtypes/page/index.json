@@ -8,11 +8,17 @@
     "Main": {
       "pagetitle": {
         "type": "Text",
-        "config": { "label": "Page Title", "placeholder": "" }
+        "config": {
+          "label": "Page Title",
+          "placeholder": ""
+        }
       },
       "uid": {
         "type": "UID",
-        "config": { "label": "Slug", "placeholder": "" }
+        "config": {
+          "label": "Slug",
+          "placeholder": ""
+        }
       },
       "pagemetaimage": {
         "type": "Image",
@@ -24,18 +30,52 @@
       },
       "pagemetadescription": {
         "type": "Text",
-        "config": { "label": "Page Meta Description", "placeholder": "" }
+        "config": {
+          "label": "Page Meta Description",
+          "placeholder": ""
+        }
       },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "carousel": { "type": "SharedSlice" },
-            "hero_with_figure": { "type": "SharedSlice" },
-            "prose": { "type": "SharedSlice" },
-            "mailer_lite_sign_up": { "type": "SharedSlice" }
+            "carousel": {
+              "type": "SharedSlice"
+            },
+            "hero_with_figure": {
+              "type": "SharedSlice"
+            },
+            "prose": {
+              "type": "SharedSlice"
+            },
+            "mailer_lite_sign_up": {
+              "type": "SharedSlice"
+            }
           }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": ""
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": ""
+        }
+      },
+      "meta_image": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Image",
+          "placeholder": ""
         }
       }
     }

@@ -1,8 +1,5 @@
 {
   "id": "series",
-  "label": "Series",
-  "repeatable": true,
-  "status": true,
   "json": {
     "Main": {
       "seriesname": {
@@ -37,9 +34,7 @@
               "config": {
                 "label": "Series Book",
                 "select": "document",
-                "customtypes": [
-                  "book"
-                ]
+                "customtypes": ["book"]
               }
             }
           }
@@ -55,5 +50,9 @@
         }
       }
     }
-  }
+  },
+  "label": "Series",
+  "repeatable": true,
+  "status": true,
+  "format": "custom"
 }

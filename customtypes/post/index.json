@@ -1,9 +1,5 @@
 {
   "id": "post",
-  "label": "Post",
-  "format": "page",
-  "repeatable": true,
-  "status": true,
   "json": {
     "Main": {
       "title": {
@@ -15,17 +11,33 @@
           "single": "heading1"
         }
       },
-      "uid": { "config": { "label": "UID", "placeholder": "" }, "type": "UID" },
+      "uid": {
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "carousel": { "type": "SharedSlice" },
-            "mailer_lite_sign_up": { "type": "SharedSlice" },
-            "series_hero": { "type": "SharedSlice" },
-            "hero_with_figure": { "type": "SharedSlice" },
-            "prose": { "type": "SharedSlice" }
+            "carousel": {
+              "type": "SharedSlice"
+            },
+            "mailer_lite_sign_up": {
+              "type": "SharedSlice"
+            },
+            "series_hero": {
+              "type": "SharedSlice"
+            },
+            "hero_with_figure": {
+              "type": "SharedSlice"
+            },
+            "prose": {
+              "type": "SharedSlice"
+            }
           }
         }
       }
@@ -43,7 +55,10 @@
       "metaimage": {
         "config": {
           "label": "Meta Image",
-          "constraint": { "height": 1260, "width": 2400 },
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
           "thumbnails": []
         },
         "type": "Image"
@@ -56,5 +71,9 @@
         "type": "Text"
       }
     }
-  }
+  },
+  "label": "Post",
+  "repeatable": true,
+  "status": true,
+  "format": "page"
 }

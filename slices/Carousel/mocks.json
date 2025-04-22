@@ -1,110 +1,110 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "carouseltitle": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "Jamie Whitmann's Carousel"
-      },
-      "carouseldescription": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Jamie Whitmann's description of the carousel",
-              "spans": []
-            },
-            "direction": "ltr"
-          }
-        ]
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "carouselimage",
-            {
-              "origin": {
-                "id": "KYpbWtY7DJM",
-                "url": "https://images.unsplash.com/photo-1571840070800-6ffc6d2e5676?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y293Z2lybHxlbnwwfHx8fDE2ODExMjA4ODk&ixlib=rb-4.0.3&q=85",
-                "width": 3648,
-                "height": 5472
-              },
-              "url": "https://images.unsplash.com/photo-1571840070800-6ffc6d2e5676?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y293Z2lybHxlbnwwfHx8fDE2ODExMjA4ODk&ixlib=rb-4.0.3&q=85&rect=46%2C0%2C3557%2C5472&w=260&h=400",
-              "width": 260,
-              "height": 400,
-              "edit": {
-                "background": "transparent",
-                "zoom": 1,
-                "crop": {
-                  "x": 46,
-                  "y": 0
-                }
-              },
-              "credits": null,
-              "alt": null,
-              "__TYPE__": "ImageContent",
-              "thumbnails": {}
-            }
-          ],
-          [
-            "carouselimagelink",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "https://www.jamiewhitmann.com"
-              }
-            }
-          ]
-        ]
-      },
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "carouselimage",
-            {
-              "url": "https://images.unsplash.com/photo-1619368562181-1e4b3dc70570?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8Y293Ym95fGVufDB8fHx8MTY4MTEyMDg2OQ&ixlib=rb-4.0.3&q=85&rect=223%2C0%2C2304%2C3545&w=260&h=400",
-              "origin": {
-                "id": "XbmRELwxS_Q",
-                "url": "https://images.unsplash.com/photo-1619368562181-1e4b3dc70570?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8Y293Ym95fGVufDB8fHx8MTY4MTEyMDg2OQ&ixlib=rb-4.0.3&q=85",
-                "width": 2750,
-                "height": 3545
-              },
-              "width": 260,
-              "height": 400,
-              "edit": {
-                "background": "transparent",
-                "zoom": 1,
-                "crop": {
-                  "x": 223,
-                  "y": 0
-                }
-              },
-              "credits": null,
-              "alt": null,
-              "__TYPE__": "ImageContent",
-              "thumbnails": {}
-            }
-          ],
-          [
-            "carouselimagelink",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "ExternalLink",
-                "url": "https://www.jamiewhitmann.com"
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"carouseltitle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Jamie Whitmann's Carousel"
+			},
+			"carouseldescription": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo in velit veniam culpa duis magna dolore proident ipsum fugiat. Culpa voluptate reprehenderit nulla sint do officia officia ea sunt adipisicing incididunt est anim ut. Lorem cupidatat velit ex nostrud aliqua nulla."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"carouselimage",
+						{
+							"origin": {
+								"id": "KYpbWtY7DJM",
+								"url": "https://images.unsplash.com/photo-1571840070800-6ffc6d2e5676?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y293Z2lybHxlbnwwfHx8fDE2ODExMjA4ODk&ixlib=rb-4.0.3&q=85",
+								"width": 3648,
+								"height": 5472
+							},
+							"url": "https://images.unsplash.com/photo-1571840070800-6ffc6d2e5676?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyNnx8Y293Z2lybHxlbnwwfHx8fDE2ODExMjA4ODk&ixlib=rb-4.0.3&q=85&rect=46%2C0%2C3557%2C5472&w=260&h=400",
+							"width": 260,
+							"height": 400,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 46,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"carouselimagelink",
+						{
+							"key": "754f8d89-35a7-479a-873f-4cf4e58d43b6",
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://www.jamiewhitmann.com"
+							}
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"carouselimage",
+						{
+							"url": "https://images.unsplash.com/photo-1619368562181-1e4b3dc70570?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8Y293Ym95fGVufDB8fHx8MTY4MTEyMDg2OQ&ixlib=rb-4.0.3&q=85&rect=223%2C0%2C2304%2C3545&w=260&h=400",
+							"origin": {
+								"id": "XbmRELwxS_Q",
+								"url": "https://images.unsplash.com/photo-1619368562181-1e4b3dc70570?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwxMXx8Y293Ym95fGVufDB8fHx8MTY4MTEyMDg2OQ&ixlib=rb-4.0.3&q=85",
+								"width": 2750,
+								"height": 3545
+							},
+							"width": 260,
+							"height": 400,
+							"edit": {
+								"background": "transparent",
+								"zoom": 1,
+								"crop": {
+									"x": 223,
+									"y": 0
+								}
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					],
+					[
+						"carouselimagelink",
+						{
+							"key": "444d0cb3-2ef9-413c-848f-120e65afef75",
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://www.jamiewhitmann.com"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
 ]
