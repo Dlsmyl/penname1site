@@ -8,7 +8,15 @@ import { components } from '@/slices'
 
 export default async function Page() {
   const client = createClient()
-  const page = await client.getSingle('homepage').catch(() => notFound())
+  const page = await client
+    .getSingle('homepage', {
+      fetchLinks: [
+        'series.seriesimage',
+        'series.boxsetlink',
+        'series.seriesname',
+      ],
+    })
+    .catch(() => notFound())
 
   return <SliceZone slices={page.data.slices} components={components} />
 }

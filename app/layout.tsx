@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import { Cormorant } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import { createClient } from '@/prismicio'
+// import Navbar from '@/components/Navbar'
+// import { createClient } from '@/prismicio'
+import Header from '@/components/layout/Header/Header'
+import { PrismicPreview } from '@prismicio/next'
+import { repositoryName } from '@/prismicio'
 
 const cormorant = Cormorant({
   variable: '--font-heading-serif',
@@ -17,15 +20,17 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const client = createClient()
-  const navigation = await client.getSingle('main_navigation')
+  // const client = createClient()
+  // const navigation = await client.getSingle('main_navigation')
   return (
     <html lang="en">
       <body className={`${cormorant.variable} antialiased`}>
-        <Navbar navigation={navigation} />
+        {/* <Navbar navigation={navigation} /> */}
+        <Header />
         <main id="content" tabIndex={-1}>
           {children}
         </main>
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
   )

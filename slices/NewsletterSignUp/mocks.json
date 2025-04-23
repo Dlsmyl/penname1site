@@ -41,7 +41,7 @@
 			},
 			"buttoncolor": {
 				"__TYPE__": "FieldContent",
-				"value": "success",
+				"value": "default",
 				"type": "Select"
 			}
 		},

@@ -1,5 +1,9 @@
 {
   "id": "post",
+  "label": "Post",
+  "repeatable": true,
+  "status": true,
+  "format": "page",
   "json": {
     "Main": {
       "title": {
@@ -17,6 +21,15 @@
           "placeholder": ""
         },
         "type": "UID"
+      },
+      "excerpt": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Excerpt",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "strong,em,paragraph"
+        }
       },
       "slices": {
         "type": "Slices",
@@ -43,16 +56,14 @@
       }
     },
     "SEO & Metadata": {
-      "metadescription": {
+      "meta_description": {
+        "type": "Text",
         "config": {
           "label": "Meta Description",
-          "placeholder": "A brief summary of the page",
-          "allowTargetBlank": true,
-          "single": "paragraph"
-        },
-        "type": "StructuredText"
+          "placeholder": ""
+        }
       },
-      "metaimage": {
+      "meta_image": {
         "config": {
           "label": "Meta Image",
           "constraint": {
@@ -63,7 +74,7 @@
         },
         "type": "Image"
       },
-      "metatitle": {
+      "meta_title": {
         "config": {
           "label": "Meta Title",
           "placeholder": "A title of the page used for social media and search engines"
@@ -71,9 +82,5 @@
         "type": "Text"
       }
     }
-  },
-  "label": "Post",
-  "repeatable": true,
-  "status": true,
-  "format": "page"
+  }
 }

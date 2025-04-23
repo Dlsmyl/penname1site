@@ -15,13 +15,11 @@ export type HeroWithFigureProps =
   SliceComponentProps<Content.HeroWithFigureSlice>
 
 const HeroWithFigure = ({ slice }: HeroWithFigureProps) => {
-  // define HTML serializer
-
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex items-center px-4 py-2 md:px-6 md:py-4 lg:py-6 relative lg:h-[calc(100vh-124px)] lg:min-h-[750px]"
+      className="flex items-center px-4 py-2 md:px-6 md:py-4 lg:py-6 relative lg:h-[calc(100vh-128px)] lg:min-h-[750px]"
     >
       <div className="mx-auto w-full">
         <div className="relative mx-auto max-w-5xl">
@@ -49,7 +47,7 @@ const HeroWithFigure = ({ slice }: HeroWithFigureProps) => {
 
             <div className="text-center md:text-left mx-auto">
               {isFilled.keyText(slice.primary.heroheading) && (
-                <Heading as="h1" size="6xl">
+                <Heading as="h2" size="6xl">
                   {slice.primary.heroheading}
                 </Heading>
               )}
@@ -59,11 +57,13 @@ const HeroWithFigure = ({ slice }: HeroWithFigureProps) => {
                 )}
               </div>
               {isFilled.link(slice.primary.herobuttonlink) && (
-                <Button asChild variant={'default'} size={'lg'}>
+                <Button
+                  asChild
+                  variant={slice.primary.herobuttonlink.variant || 'default'}
+                  size={'lg'}
+                >
                   <PrismicNextLink field={slice.primary.herobuttonlink}>
-                    <span className="uppercase">
-                      {slice.primary.herobuttontext}
-                    </span>
+                    <span>{slice.primary.herobuttonlink.text}</span>
                   </PrismicNextLink>
                 </Button>
               )}

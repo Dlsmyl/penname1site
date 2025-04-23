@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { Content } from '@prismicio/client'
 import { SliceComponentProps } from '@prismicio/react'
+import Section from '@/components/layout/Section'
+import { PrismicRichText } from '@/components/PrismicRichText'
 
 /**
  * Props for `Prose`.
@@ -12,12 +14,14 @@ export type ProseProps = SliceComponentProps<Content.ProseSlice>
  */
 const Prose: FC<ProseProps> = ({ slice }) => {
   return (
-    <section
+    <Section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      width="md"
+      className="py-6 md:py-8 lg:py-12 prose lg:prose-lg xl:prose-xl mx-auto"
     >
-      Placeholder component for Prose (variation: {slice.variation}) Slices
-    </section>
+      <PrismicRichText field={slice.primary.prosecontent} />
+    </Section>
   )
 }
 

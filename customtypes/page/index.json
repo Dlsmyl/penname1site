@@ -20,26 +20,14 @@
           "placeholder": ""
         }
       },
-      "pagemetaimage": {
-        "type": "Image",
-        "config": {
-          "label": "Page Meta Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "pagemetadescription": {
-        "type": "Text",
-        "config": {
-          "label": "Page Meta Description",
-          "placeholder": ""
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "content_index": {
+              "type": "SharedSlice"
+            },
             "carousel": {
               "type": "SharedSlice"
             },
@@ -72,10 +60,11 @@
         }
       },
       "meta_image": {
-        "type": "Text",
+        "type": "Image",
         "config": {
           "label": "Meta Image",
-          "placeholder": ""
+          "constraint": {},
+          "thumbnails": []
         }
       }
     }

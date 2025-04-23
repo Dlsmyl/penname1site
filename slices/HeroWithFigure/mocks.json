@@ -46,17 +46,14 @@
 					}
 				]
 			},
-			"herobuttontext": {
-				"__TYPE__": "FieldContent",
-				"value": "Call to Action Button",
-				"type": "Text"
-			},
 			"herobuttonlink": {
-				"key": "8da6c6da-888a-456b-9e25-12fb876a6409",
+				"key": "d3c1321a-6c2a-46bc-af02-38bd4b3ddfd3",
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "https://neilmastroianni.com"
+					"url": "http://google.com",
+					"text": "nor",
+					"variant": "outline"
 				}
 			},
 			"herobackgroundcolor": {

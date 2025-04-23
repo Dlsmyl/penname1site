@@ -33,7 +33,16 @@
                 "placeholder": "",
                 "allowTargetBlank": false,
                 "select": null,
-                "allowText": true
+                "allowText": true,
+                "repeat": false,
+                "variants": [
+                  "default",
+                  "destructive",
+                  "ghost",
+                  "link",
+                  "outline",
+                  "secondary"
+                ]
               }
             }
           }

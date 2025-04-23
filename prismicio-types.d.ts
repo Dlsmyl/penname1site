@@ -201,7 +201,7 @@ export interface MainNavigationDocumentDataNavigationlinksItem {
     string,
     unknown,
     prismic.FieldState,
-    never
+    "default" | "destructive" | "ghost" | "link" | "outline" | "secondary"
   >;
 }
 
@@ -297,6 +297,7 @@ export type MainNavigationDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ContentIndexSlice
   | CarouselSlice
   | HeroWithFigureSlice
   | ProseSlice
@@ -316,28 +317,6 @@ interface PageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   pagetitle: prismic.KeyTextField;
-
-  /**
-   * Page Meta Image field in *Page*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.pagemetaimage
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  pagemetaimage: prismic.ImageField<never>;
-
-  /**
-   * Page Meta Description field in *Page*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: page.pagemetadescription
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  pagemetadescription: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Page*
@@ -373,13 +352,13 @@ interface PageDocumentData {
   /**
    * Meta Image field in *Page*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
    * - **API ID Path**: page.meta_image
    * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  meta_image: prismic.KeyTextField;
+  meta_image: prismic.ImageField<never>;
 }
 
 /**
@@ -417,6 +396,17 @@ interface PostDocumentData {
   title: prismic.TitleField;
 
   /**
+   * Excerpt field in *Post*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.excerpt
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  excerpt: prismic.RichTextField;
+
+  /**
    * Slice Zone field in *Post*
    *
    * - **Field Type**: Slice Zone
@@ -428,35 +418,35 @@ interface PostDocumentData {
   slices: prismic.SliceZone<PostDocumentDataSlicesSlice> /**
    * Meta Description field in *Post*
    *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: post.metadescription
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.meta_description
    * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */;
-  metadescription: prismic.RichTextField;
+  meta_description: prismic.KeyTextField;
 
   /**
    * Meta Image field in *Post*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: post.metaimage
+   * - **API ID Path**: post.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  metaimage: prismic.ImageField<never>;
+  meta_image: prismic.ImageField<never>;
 
   /**
    * Meta Title field in *Post*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: post.metatitle
+   * - **API ID Path**: post.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  metatitle: prismic.KeyTextField;
+  meta_title: prismic.KeyTextField;
 }
 
 /**
@@ -648,6 +638,82 @@ export type CarouselSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *ContentIndex → Default → Primary*
+ */
+export interface ContentIndexSliceDefaultPrimary {
+  /**
+   * Content Type field in *ContentIndex → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: post
+   * - **API ID Path**: content_index.default.primary.content_type
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  content_type: prismic.SelectField<"post" | "book", "filled">;
+
+  /**
+   * Fallback Item Image field in *ContentIndex → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: content_index.default.primary.fallback_item_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  fallback_item_image: prismic.ImageField<never>;
+
+  /**
+   * Number to Display field in *ContentIndex → Default → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: content_index.default.primary.number_to_display
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  number_to_display: prismic.NumberField;
+
+  /**
+   * Content CTA Text field in *ContentIndex → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: What should the buttons say?
+   * - **API ID Path**: content_index.default.primary.content_cta_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  content_cta_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContentIndex Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContentIndexSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ContentIndexSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ContentIndex*
+ */
+type ContentIndexSliceVariation = ContentIndexSliceDefault;
+
+/**
+ * ContentIndex Shared Slice
+ *
+ * - **API ID**: `content_index`
+ * - **Description**: ContentIndex
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContentIndexSlice = prismic.SharedSlice<
+  "content_index",
+  ContentIndexSliceVariation
+>;
+
+/**
  * Primary content in *HeroWithFigure → Default → Primary*
  */
 export interface HeroWithFigureSliceDefaultPrimary {
@@ -693,16 +759,6 @@ export interface HeroWithFigureSliceDefaultPrimary {
   herotext: prismic.RichTextField;
 
   /**
-   * Button Text field in *HeroWithFigure → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero_with_figure.default.primary.herobuttontext
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  herobuttontext: prismic.KeyTextField;
-
-  /**
    * Button Link field in *HeroWithFigure → Default → Primary*
    *
    * - **Field Type**: Link
@@ -715,7 +771,7 @@ export interface HeroWithFigureSliceDefaultPrimary {
     string,
     unknown,
     prismic.FieldState,
-    never
+    "default" | "secondary" | "ghost" | "outline" | "destructive" | "link"
   >;
 
   /**
@@ -1024,18 +1080,13 @@ export interface MailerLiteSignUpSliceDefaultPrimary {
    *
    * - **Field Type**: Select
    * - **Placeholder**: Select button color
+   * - **Default Value**: default
    * - **API ID Path**: mailer_lite_sign_up.default.primary.buttoncolor
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   buttoncolor: prismic.SelectField<
-    | "primary"
-    | "secondary"
-    | "accent"
-    | "info"
-    | "neutral"
-    | "success"
-    | "warning"
-    | "error"
+    "default" | "secondary" | "outline" | "destructive" | "ghost" | "link",
+    "filled"
   >;
 }
 
@@ -1137,6 +1188,37 @@ type ProseSliceVariation = ProseSliceDefault;
 export type ProseSlice = prismic.SharedSlice<"prose", ProseSliceVariation>;
 
 /**
+ * Item in *SeriesHero → Default → Primary → Series*
+ */
+export interface SeriesHeroSliceDefaultPrimarySeriesItem {
+  /**
+   * Series field in *SeriesHero → Default → Primary → Series*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: series_hero.default.primary.series[].series
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  series: prismic.ContentRelationshipField<"series">;
+
+  /**
+   * Series Link field in *SeriesHero → Default → Primary → Series*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: series_hero.default.primary.series[].series_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  series_link: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
  * Primary content in *SeriesHero → Default → Primary*
  */
 export interface SeriesHeroSliceDefaultPrimary {
@@ -1179,21 +1261,16 @@ export interface SeriesHeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   backgroundcolor: prismic.ColorField;
-}
 
-/**
- * Primary content in *SeriesHero → Items*
- */
-export interface SeriesHeroSliceDefaultItem {
   /**
-   * Series field in *SeriesHero → Items*
+   * Series field in *SeriesHero → Default → Primary*
    *
-   * - **Field Type**: Content Relationship
+   * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: series_hero.items[].series
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   * - **API ID Path**: series_hero.default.primary.series[]
+   * - **Documentation**: https://prismic.io/docs/field#group
    */
-  series: prismic.ContentRelationshipField<"series">;
+  series: prismic.GroupField<Simplify<SeriesHeroSliceDefaultPrimarySeriesItem>>;
 }
 
 /**
@@ -1206,7 +1283,7 @@ export interface SeriesHeroSliceDefaultItem {
 export type SeriesHeroSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<SeriesHeroSliceDefaultPrimary>,
-  Simplify<SeriesHeroSliceDefaultItem>
+  never
 >;
 
 /**
@@ -1271,6 +1348,10 @@ declare module "@prismicio/client" {
       CarouselSliceDefaultItem,
       CarouselSliceVariation,
       CarouselSliceDefault,
+      ContentIndexSlice,
+      ContentIndexSliceDefaultPrimary,
+      ContentIndexSliceVariation,
+      ContentIndexSliceDefault,
       HeroWithFigureSlice,
       HeroWithFigureSliceDefaultPrimary,
       HeroWithFigureSliceHeroWithFigureGradientPrimary,
@@ -1289,8 +1370,8 @@ declare module "@prismicio/client" {
       ProseSliceVariation,
       ProseSliceDefault,
       SeriesHeroSlice,
+      SeriesHeroSliceDefaultPrimarySeriesItem,
       SeriesHeroSliceDefaultPrimary,
-      SeriesHeroSliceDefaultItem,
       SeriesHeroSliceVariation,
       SeriesHeroSliceDefault,
     };
