@@ -6,6 +6,7 @@ import './globals.css'
 import Header from '@/components/layout/Header/Header'
 import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '@/prismicio'
+import Footer from '@/components/layout/Footer/Footer'
 
 const cormorant = Cormorant({
   variable: '--font-heading-serif',
@@ -30,6 +31,7 @@ export default async function RootLayout({
         <main id="content" tabIndex={-1}>
           {children}
         </main>
+        <Footer />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
