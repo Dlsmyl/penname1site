@@ -59,7 +59,7 @@ const NewsletterForm = ({
   React.useEffect(() => {
     if (formInteraction) {
       const recaptchaScript = document.createElement('script')
-      recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`
+      recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=6LdegF8iAAAAADDOMwVAXSvPRZwr2GC_O_5cxNgs`
       recaptchaScript.async = true
       recaptchaScript.defer = true
       document.head.appendChild(recaptchaScript)
