@@ -49,7 +49,7 @@ export async function addSubscriber(
   } else {
     if (captchaScore > 0.8) {
       // likley to be a human
-      const API_KEY = process.env.EMS_API_KEY
+      const API_KEY = process.env.MAILERLITE_API_KEY
       try {
         const ems_response = await axios.post(
           `https://connect.mailerlite.com/api/subscribers`,
