@@ -1,63 +1,85 @@
 [
-  {
-    "__TYPE__": "SharedSliceContent",
-    "variation": "default",
-    "primary": {
-      "title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading2",
-            "content": {
-              "text": "Sudden"
-            }
-          }
-        ]
-      },
-      "subtitle": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading3",
-            "content": {
-              "text": "Necessary"
-            }
-          }
-        ]
-      },
-      "description": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Do tempor et ipsum eu elit aliquip laborum velit excepteur minim cillum nisi officia in. Ipsum exercitation sunt deserunt ex aute incididunt aliquip. In do quis eiusmod culpa excepteur ullamco non."
-            }
-          }
-        ]
-      },
-      "backgroundcolor": {
-        "__TYPE__": "FieldContent",
-        "value": "#d9e3f0",
-        "type": "Color"
-      }
-    },
-    "items": [
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "series",
-            {
-              "__TYPE__": "LinkContent",
-              "value": {
-                "__TYPE__": "DocumentLink",
-                "id": "mock_document_id"
-              }
-            }
-          ]
-        ]
-      }
-    ]
-  }
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Sudden"
+						}
+					}
+				]
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Necessary"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Do tempor et ipsum eu elit aliquip laborum velit excepteur minim cillum nisi officia in. Ipsum exercitation sunt deserunt ex aute incididunt aliquip. In do quis eiusmod culpa excepteur ullamco non."
+						}
+					}
+				]
+			},
+			"backgroundcolor": {
+				"__TYPE__": "FieldContent",
+				"value": "#d9e3f0",
+				"type": "Color"
+			},
+			"series": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"series",
+								{
+									"key": "0db7f3f6-5abd-49e4-9a39-0864cd11e949",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							],
+							[
+								"series_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "d23ae6fe-cdd1-4563-bd2e-3885a6608f78",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "handle"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
 ]

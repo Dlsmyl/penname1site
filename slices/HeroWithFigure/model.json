@@ -47,20 +47,22 @@
             "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "herobuttontext": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
-        },
         "herobuttonlink": {
           "type": "Link",
           "config": {
             "label": "Button Link",
             "placeholder": "",
             "allowTargetBlank": false,
-            "select": null
+            "select": null,
+            "allowText": true,
+            "variants": [
+              "default",
+              "secondary",
+              "ghost",
+              "outline",
+              "destructive",
+              "link"
+            ]
           }
         },
         "herobackgroundcolor": {

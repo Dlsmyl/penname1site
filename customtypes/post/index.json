@@ -1,9 +1,9 @@
 {
   "id": "post",
   "label": "Post",
-  "format": "page",
   "repeatable": true,
   "status": true,
+  "format": "page",
   "json": {
     "Main": {
       "title": {
@@ -15,40 +15,66 @@
           "single": "heading1"
         }
       },
-      "uid": { "config": { "label": "UID", "placeholder": "" }, "type": "UID" },
+      "uid": {
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        },
+        "type": "UID"
+      },
+      "excerpt": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Excerpt",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "strong,em,paragraph"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "carousel": { "type": "SharedSlice" },
-            "mailer_lite_sign_up": { "type": "SharedSlice" },
-            "series_hero": { "type": "SharedSlice" },
-            "hero_with_figure": { "type": "SharedSlice" },
-            "prose": { "type": "SharedSlice" }
+            "carousel": {
+              "type": "SharedSlice"
+            },
+            "mailer_lite_sign_up": {
+              "type": "SharedSlice"
+            },
+            "series_hero": {
+              "type": "SharedSlice"
+            },
+            "hero_with_figure": {
+              "type": "SharedSlice"
+            },
+            "prose": {
+              "type": "SharedSlice"
+            }
           }
         }
       }
     },
     "SEO & Metadata": {
-      "metadescription": {
+      "meta_description": {
+        "type": "Text",
         "config": {
           "label": "Meta Description",
-          "placeholder": "A brief summary of the page",
-          "allowTargetBlank": true,
-          "single": "paragraph"
-        },
-        "type": "StructuredText"
+          "placeholder": ""
+        }
       },
-      "metaimage": {
+      "meta_image": {
         "config": {
           "label": "Meta Image",
-          "constraint": { "height": 1260, "width": 2400 },
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
           "thumbnails": []
         },
         "type": "Image"
       },
-      "metatitle": {
+      "meta_title": {
         "config": {
           "label": "Meta Title",
           "placeholder": "A title of the page used for social media and search engines"

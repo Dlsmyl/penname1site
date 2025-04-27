@@ -3,6 +3,7 @@
   "label": "Main Navigation",
   "repeatable": false,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "logo": {
@@ -31,7 +32,17 @@
                 "label": "Menu Item",
                 "placeholder": "",
                 "allowTargetBlank": false,
-                "select": null
+                "select": null,
+                "allowText": true,
+                "repeat": false,
+                "variants": [
+                  "default",
+                  "destructive",
+                  "ghost",
+                  "link",
+                  "outline",
+                  "secondary"
+                ]
               }
             }
           }
@@ -55,12 +66,7 @@
               "config": {
                 "label": "SocialPlatform",
                 "placeholder": "",
-                "options": [
-                  "Facebook",
-                  "Instagram",
-                  "TikTok",
-                  "Twitter"
-                ]
+                "options": ["Facebook", "Instagram", "TikTok", "Twitter"]
               }
             }
           }

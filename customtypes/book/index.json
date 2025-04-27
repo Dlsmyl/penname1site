@@ -1,8 +1,5 @@
 {
   "id": "book",
-  "label": "Book",
-  "repeatable": true,
-  "status": true,
   "json": {
     "Main": {
       "booktitle": {
@@ -54,5 +51,9 @@
         }
       }
     }
-  }
+  },
+  "label": "Book",
+  "repeatable": true,
+  "status": true,
+  "format": "custom"
 }

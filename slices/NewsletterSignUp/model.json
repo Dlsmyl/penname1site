@@ -58,15 +58,14 @@
             "label": "Button Color",
             "placeholder": "Select button color",
             "options": [
-              "primary",
+              "default",
               "secondary",
-              "accent",
-              "info",
-              "neutral",
-              "success",
-              "warning",
-              "error"
-            ]
+              "outline",
+              "destructive",
+              "ghost",
+              "link"
+            ],
+            "default_value": "default"
           }
         }
       },
