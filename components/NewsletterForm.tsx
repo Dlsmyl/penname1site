@@ -126,7 +126,7 @@ const NewsletterForm = ({
             window.grecaptcha?.ready(() => {
               // Use optional chaining here
               window.grecaptcha
-                ?.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '', {
+                ?.execute('6LdegF8iAAAAADDOMwVAXSvPRZwr2GC_O_5cxNgs', {
                   // And here
                   action: 'submit',
                 })
