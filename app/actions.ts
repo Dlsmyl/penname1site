@@ -51,15 +51,19 @@ export async function addSubscriber(
       // likley to be a human
       const API_KEY = process.env.MAILERLITE_API_KEY
       try {
+        const baseUrl = 'https://connect.mailerlite.com'
+        const endPoint = '/api/subscribers'
+        const url = baseUrl + endPoint
+        const email = formData.get('email')
         const ems_response = await axios.post(
-          `https://connect.mailerlite.com/api/subscribers`,
+          url,
           {
-            email: formData.get('email'),
+            email,
             groups: groupIds,
           },
           {
             headers: {
-              'Content-Type': 'application/json; charset=utf-8',
+              'Content-Type': 'application/json',
               Accept: 'application/json',
               Authorization: `Bearer ${API_KEY}`,
             },
@@ -69,8 +73,23 @@ export async function addSubscriber(
           return { message: ems_response.status }
         }
       } catch (e: unknown) {
+        console.error('Error calling MailerLite API:', e) // Log the full error on the server
         const error = e as AxiosError
-        return { message: error }
+
+        // Extract serializable information from the AxiosError
+        let errorMessage = 'Failed to subscribe.'
+        if (error.response) {
+          // Server responded with a status code outside the 2xx range
+          errorMessage = `Subscription failed: ${error.response.status} - ${JSON.stringify(error.response.data) || error.message}`
+        } else if (error.request) {
+          // Request was made but no response received
+          errorMessage = 'Subscription failed: No response from MailerLite.'
+        } else {
+          // Something else happened in setting up the request
+          errorMessage = `Subscription failed: ${error.message}`
+        }
+
+        return { message: errorMessage, success: false } // Return only serializable data
       }
     }
   }
